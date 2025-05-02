@@ -94,8 +94,8 @@ const Hero = () => {
             className="flex justify-center space-x-16 md:space-x-24"
           >
             {[
-              { number: "25+", text: "Years of Excellence" },
-              { number: "$1B+", text: "Recovered for Clients" },
+              { number: "9+", text: "Years of Excellence" },
+              { number: "$500M+", text: "Recovered for Clients" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <p className="text-3xl font-bold text-accent">{stat.number}</p>

@@ -96,7 +96,7 @@ const Footer = () => {
             </Card> */}
 
             {/* Social Links */}
-            <div className="flex flex-wrap gap-3">
+            {/* <div className="flex flex-wrap gap-3">
               {socialLinks.map((link, index) => (
                 <a
                   key={index}
@@ -107,7 +107,7 @@ const Footer = () => {
                   {link.icon}
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Information */}

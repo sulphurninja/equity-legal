@@ -70,7 +70,7 @@ const Header = () => {
         <div className="container mx-auto px-4 flex justify-center items-center">
           <Clock size={14} className="mr-2" />
           <p className="text-xs font-medium">
-            Free consultations available 24/7 • Call now: <a href="tel:8001234567" className="font-bold hover:underline">(800) 123-4567</a>
+            Free consultations available 24/7 • Call now: <a href="tel:8001234567" className="font-bold hover:underline">(908) 864-0126</a>
           </p>
         </div>
       </div> */}
@@ -202,7 +202,7 @@ const Header = () => {
             <div className="flex flex-col">
               <span className="text-xs opacity-80">Call for Free Consultation</span>
               <a href="tel:8001234567" className="hover:text-accent transition">
-              (908) 864-0126
+                (908) 864-0126
               </a>
             </div>
           </div>
@@ -284,7 +284,7 @@ const Header = () => {
                     <div className="flex justify-center mt-4">
                       <a href="tel:8001234567" className="flex items-center text-primary font-medium">
                         <Phone className="mr-2" size={16} />
-                        Call (800) 123-4567
+                        Call (908) 864-0126
                       </a>
                     </div>
                   </div>

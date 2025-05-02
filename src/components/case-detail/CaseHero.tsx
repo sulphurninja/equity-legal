@@ -152,7 +152,7 @@ const CaseHero = ({ caseData }: CaseHeroProps) => {
               >
                 <a href="tel:8001234567" className="flex text-black items-center">
                   <Phone size={16} className="mr-2" />
-                  Call (800) 123-4567
+                  Call (908) 864-0126
                 </a>
               </Button>
 

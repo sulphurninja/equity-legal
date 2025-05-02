@@ -7,7 +7,7 @@ import Footer from "@/components/sections/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Equity Legal Services - Professional Legal Representation",
+  title: "Lex Claim Connect - Professional Legal Representation",
   description: "Expert legal assistance for mass tort and class action cases including Camp Lejeune, 3M Earplugs, Roundup, and more. Free case evaluations available.",
 };
 

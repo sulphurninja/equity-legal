@@ -69,13 +69,11 @@ const Footer = () => {
             <div className="flex items-center mb-6">
               <img
                 src="/logo.png"
-                alt="Equity Legal Services Logo"
-
+                alt="Lex Claim Connect Logo"
                 className="w-auto h-24"
               />
-
             </div>
-            <span className="text-xl text-nowrap font-bold">Equity Legal Services</span>
+            <span className="text-xl text-nowrap font-bold">Lex Claim Connect</span>
             <p className="mb-6 text-primary-foreground/80 leading-relaxed">
               We're dedicated to helping victims of negligence receive the compensation they deserve. Our experienced legal team handles mass tort and class action cases nationwide.
             </p>
@@ -113,7 +111,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 text-sm">
             <h3 className="text-lg font-bold mb-6 flex items-center">
               <Badge variant="outline" className="mr-2 bg-accent/20 text-accent border-transparent uppercase text-xs px-1.5">
                 Contact
@@ -125,8 +123,8 @@ const Footer = () => {
                 <Phone className="mr-3 mt-1 flex-shrink-0 text-accent group-hover:text-accent/80 transition-colors" size={18} />
                 <div>
                   <p className="font-medium text-sm text-primary-foreground/70 mb-1">Call Us</p>
-                  <a href="tel:8001234567" className="text-primary-foreground hover:text-accent transition-colors font-medium">
-                    (800) 123-4567
+                  <a href="tel:9088640126" className="text-primary-foreground hover:text-accent transition-colors font-medium">
+                    (908) 864-0126
                   </a>
                 </div>
               </div>
@@ -134,8 +132,8 @@ const Footer = () => {
                 <Mail className="mr-3 mt-1 flex-shrink-0 text-accent group-hover:text-accent/80 transition-colors" size={18} />
                 <div>
                   <p className="font-medium text-sm text-primary-foreground/70 mb-1">Email Us</p>
-                  <a href="mailto:info@equitylegalservices.com" className="text-primary-foreground hover:text-accent transition-colors break-all font-medium">
-                    info@equitylegalservices.com
+                  <a href="mailto:support@lexclaimconnect.com" className="text-primary-foreground hover:text-accent transition-colors break-all font-medium">
+                    support@lexclaimconnect.com
                   </a>
                 </div>
               </div>
@@ -144,8 +142,8 @@ const Footer = () => {
                 <div>
                   <p className="font-medium text-sm text-primary-foreground/70 mb-1">Our Office</p>
                   <address className="text-primary-foreground/90 not-italic">
-                    123 Legal Street, Suite 100<br />
-                    New York, NY 10001
+                  613, Ridge Road, 201 Monmouth Junction<br />
+                  NJ, 08852
                   </address>
                 </div>
               </div>
@@ -198,7 +196,7 @@ const Footer = () => {
                 <Button
                   asChild
                   variant="outline"
-                  className="border-accent/50  hover:text-accent hover:bg-accent/20 hover:border-accent w-full text-black justify-start"
+                  className="border-accent/50 hover:text-accent hover:bg-accent/20 hover:border-accent w-full text-black justify-start"
                 >
                   <Link href="#case-evaluation" className="flex items-center">
                     <ExternalLink size={14} className="mr-2" />
@@ -213,7 +211,7 @@ const Footer = () => {
         <Separator className="bg-white/10 mb-8" />
 
         <div className="text-center text-sm text-primary-foreground/70">
-          <p className="mb-4">© {currentYear} Equity Legal Services. All Rights Reserved.</p>
+          <p className="mb-4">© {currentYear} Lex Claim Connect. All Rights Reserved.</p>
           <div className="flex flex-wrap justify-center gap-4 mb-6">
             {legalLinks.map((link, index) => (
               <React.Fragment key={index}>

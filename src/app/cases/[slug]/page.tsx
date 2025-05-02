@@ -21,13 +21,13 @@ export async function generateMetadata({
 
   if (!caseData) {
     return {
-      title: "Case Not Found | Equity Legal Services",
+      title: "Case Not Found | Lex Claim Connect",
       description: "The requested case information could not be found."
     };
   }
 
   return {
-    title: `${caseData.title} Claims | Equity Legal Services`,
+    title: `${caseData.title} Claims | Lex Claim Connect`,
     description: caseData.shortDescription,
   };
 }

@@ -85,7 +85,7 @@ const Header = () => {
           >
             <Link href="/" className="flex items-center space-x-2">
               <img
-                alt="Equity Legal Services Logo"
+                alt="Lex Claim Connect Logo"
                 src='/logo.png'
                 className="w-auto h-12 scale-125"
               />
@@ -202,7 +202,7 @@ const Header = () => {
             <div className="flex flex-col">
               <span className="text-xs opacity-80">Call for Free Consultation</span>
               <a href="tel:8001234567" className="hover:text-accent transition">
-                (800) 123-4567
+              (908) 864-0126
               </a>
             </div>
           </div>
@@ -232,12 +232,12 @@ const Header = () => {
                     <div className="flex items-center">
                       <Image
                         src="/logo.png"
-                        alt="Equity Legal Services Logo"
+                        alt="Lex Claim Connect Logo"
                         width={32}
                         height={32}
                         className="w-auto h-8 mr-2"
                       />
-                      <span className="text-lg font-bold text-primary">Equity Legal Services</span>
+                      <span className="text-lg font-bold text-primary">Lex Claim Connect</span>
                     </div>
                   </div>
                   <div className="flex-1 overflow-auto py-4">

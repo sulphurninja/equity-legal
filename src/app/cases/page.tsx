@@ -7,8 +7,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { getAllCaseTypes } from "@/lib/utils";
 
 export const metadata = {
-  title: "Mass Tort & Class Action Cases | Equity Legal Services",
-  description: "View all currently active mass tort and class action cases handled by Equity Legal Services. Find out if you qualify for compensation.",
+  title: "Mass Tort & Class Action Cases | Lex Claim Connect",
+  description: "View all currently active mass tort and class action cases handled by Lex Claim Connect. Find out if you qualify for compensation.",
 };
 
 export default function CasesPage() {
@@ -19,7 +19,7 @@ export default function CasesPage() {
       <Header />
 
       <section className="pt-32 pb-12 bg-primary/10">
-      <div className="absolute inset-0 h-24 bg-gradient-to-b from-primary/95 via-primary/90 to-primary/85" />
+        <div className="absolute inset-0 h-24 bg-gradient-to-b from-primary/95 via-primary/90 to-primary/85" />
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold text-primary mb-4">

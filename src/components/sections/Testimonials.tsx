@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     id: "1",
     name: "Sarah Johnson",
     caseType: "Camp Lejeune Water Contamination",
-    quote: "After being diagnosed with cancer linked to my time at Camp Lejeune, I didn't know where to turn. Equity Legal Services guided me through the entire process with compassion and expertise. They secured a settlement that covered all my medical expenses and provided financial security for my family.",
+    quote: "After being diagnosed with cancer linked to my time at Camp Lejeune, I didn't know where to turn. Lex Claim Connect guided me through the entire process with compassion and expertise. They secured a settlement that covered all my medical expenses and provided financial security for my family.",
     rating: 5,
     date: "January 15, 2023"
   },
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     id: "2",
     name: "Michael Rodriguez",
     caseType: "3M Combat Arms Earplugs",
-    quote: "As a veteran suffering from hearing loss due to defective earplugs, I was struggling to get the compensation I deserved. The team at Equity Legal Services fought for me every step of the way. Their knowledge of military cases made all the difference in my successful claim.",
+    quote: "As a veteran suffering from hearing loss due to defective earplugs, I was struggling to get the compensation I deserved. The team at Lex Claim Connect fought for me every step of the way. Their knowledge of military cases made all the difference in my successful claim.",
     rating: 5,
     date: "March 3, 2023"
   },
@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
     id: "3",
     name: "Jennifer Patel",
     caseType: "Roundup Weed Killer",
-    quote: "After my non-Hodgkin's lymphoma diagnosis, I suspected it was connected to years of Roundup use in my nursery business. Equity Legal Services took my case when others wouldn't. Their dedication and expertise resulted in a settlement that has given me peace of mind during a difficult time.",
+    quote: "After my non-Hodgkin's lymphoma diagnosis, I suspected it was connected to years of Roundup use in my nursery business. Lex Claim Connect took my case when others wouldn't. Their dedication and expertise resulted in a settlement that has given me peace of mind during a difficult time.",
     rating: 5,
     date: "April 22, 2023"
   },
@@ -49,7 +49,7 @@ const testimonials: Testimonial[] = [
     id: "4",
     name: "Robert Williams",
     caseType: "CPAP Machine Recall",
-    quote: "When I developed respiratory issues from my recalled CPAP machine, Equity Legal Services helped me understand my rights. They maintained clear communication throughout the process and secured compensation that covered my medical bills and much more.",
+    quote: "When I developed respiratory issues from my recalled CPAP machine, Lex Claim Connect helped me understand my rights. They maintained clear communication throughout the process and secured compensation that covered my medical bills and much more.",
     rating: 5,
     date: "June 10, 2023"
   },
@@ -57,7 +57,7 @@ const testimonials: Testimonial[] = [
     id: "5",
     name: "David Thompson",
     caseType: "Hernia Mesh Complications",
-    quote: "After multiple surgeries due to a defective hernia mesh, I was in pain and facing mounting medical bills. Equity Legal Services took on the manufacturers and won. Their tenacity and legal expertise turned my situation around completely.",
+    quote: "After multiple surgeries due to a defective hernia mesh, I was in pain and facing mounting medical bills. Lex Claim Connect took on the manufacturers and won. Their tenacity and legal expertise turned my situation around completely.",
     rating: 5,
     date: "August 5, 2023"
   }

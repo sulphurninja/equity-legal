@@ -144,21 +144,19 @@ const CaseEvaluation = () => {
         {[1, 2].map((step) => (
           <div key={step} className="flex items-center">
             <div
-              className={`rounded-full h-10 w-10 flex items-center justify-center font-medium border-2 ${
-                step === activeStep
+              className={`rounded-full h-10 w-10 flex items-center justify-center font-medium border-2 ${step === activeStep
                   ? "bg-primary text-white border-primary"
                   : step < activeStep
-                  ? "bg-primary/10 text-primary border-primary/30"
-                  : "bg-gray-100 text-gray-400 border-gray-200"
-              }`}
+                    ? "bg-primary/10 text-primary border-primary/30"
+                    : "bg-gray-100 text-gray-400 border-gray-200"
+                }`}
             >
               {step}
             </div>
             {step < 2 && (
               <div
-                className={`h-1 w-16 ${
-                  step < activeStep ? "bg-primary/30" : "bg-gray-200"
-                }`}
+                className={`h-1 w-16 ${step < activeStep ? "bg-primary/30" : "bg-gray-200"
+                  }`}
               ></div>
             )}
           </div>
@@ -385,7 +383,7 @@ const CaseEvaluation = () => {
                           I agree to the terms and conditions and consent to be contacted about my legal claim.
                         </label>
                         <p className="text-xs text-muted-foreground">
-                          By checking this box, you authorize Equity Legal Services to contact you via phone, email, or text regarding your legal inquiry.
+                          By checking this box, you authorize Lex Claim Connect to contact you via phone, email, or text regarding your legal inquiry.
                         </p>
                       </div>
                     </div>
@@ -402,7 +400,7 @@ const CaseEvaluation = () => {
                       </div>
                     )}
 
-            <div className="flex items-center justify-between pt-4">
+                    <div className="flex items-center justify-between pt-4">
                       <Button
                         type="button"
                         variant="outline"

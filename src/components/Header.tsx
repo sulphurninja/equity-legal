@@ -284,7 +284,7 @@ const Header = () => {
                     <div className="flex justify-center mt-4">
                       <a href="tel:8001234567" className="flex items-center text-primary font-medium">
                         <Phone className="mr-2" size={16} />
-                        Call (908) 864-0126
+                        Call (908) 533-6944
                       </a>
                     </div>
                   </div>

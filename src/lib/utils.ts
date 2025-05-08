@@ -542,6 +542,44 @@ export const getAllCaseTypes = (): CaseType[] => {
           answer: "The statute of limitations varies by state and depends on when your injury occurred or when you discovered it was related to the hernia mesh. Typically, you have between 1-6 years to file a claim, but this timeline can be complex in medical device cases. It's best to consult with an attorney as soon as possible to ensure your claim is filed within the appropriate timeframe."
         }
       ]
+    },
+ {
+      id: "21",
+      slug: "lds-sex-abuse",
+      title: "LDS Church Sex Abuse",
+      shortDescription: "Survivors of sexual abuse within the Church of Jesus Christ of Latter-day Saints (Mormon Church) may be eligible for compensation.",
+      fullDescription: "In recent years, numerous allegations have emerged regarding the Church of Jesus Christ of Latter-day Saints' (LDS Church) handling of sexual abuse cases. Lawsuits allege that church officials failed to report abuse to authorities, protected abusers, and used the church's abuse helpline to shield the institution rather than help victims. A significant investigation by the Associated Press in 2022 revealed how the church's helpline was often used to direct abuse reports to church attorneys rather than law enforcement, potentially enabling continued abuse. Cases involve abuse by church leaders, members in positions of authority, and abuse that occurred during church-sponsored activities or on church property. Survivors allege that the church's culture of secrecy and protection of its reputation created an environment where abuse could continue.",
+      imageUrl: "/images/cases/lds.jpg",
+      compensationInfo: "Compensation in LDS abuse cases may include damages for therapy costs, emotional trauma, pain and suffering, and sometimes punitive damages intended to reform institutional practices. Settlement amounts vary widely based on factors such as the nature and duration of abuse, its impact on the survivor's life, and the evidence of institutional negligence. Some religious institution abuse cases have resulted in settlements ranging from tens of thousands to millions of dollars.",
+      eligibilityCriteria: [
+        "Experienced sexual abuse connected to the LDS Church or its activities",
+        "Abuse perpetrated by church leaders, members, or occurred during church functions",
+        "Evidence of church negligence, cover-up, or failure to take appropriate action",
+        "Claim filed within the applicable statute of limitations (which varies by state)"
+      ],
+      relatedConditions: [
+        "Post-Traumatic Stress Disorder (PTSD)",
+        "Depression and Anxiety",
+        "Substance Abuse Issues",
+        "Self-Harm Behaviors",
+        "Trust and Relationship Difficulties",
+        "Spiritual Trauma",
+        "Sexual Dysfunction"
+      ],
+      faqs: [
+        {
+          question: "Is there a time limit for filing an LDS abuse claim?",
+          answer: "Yes, but many states have extended their statutes of limitations for childhood sexual abuse claims in recent years. Some states have even opened 'lookback windows' that temporarily allow survivors to file claims regardless of when the abuse occurred. The applicable time limit depends on the state where the abuse took place, your age when it occurred, when you discovered the connection between your injuries and the abuse, and other factors. It's important to consult with an attorney promptly to understand your options."
+        },
+        {
+          question: "What evidence is needed for an LDS abuse case?",
+          answer: "Helpful evidence can include records of church participation, documentation of reporting the abuse to church authorities, medical or therapy records related to trauma, witness statements from others who knew about the abuse or church's response, communications with church officials, and documentation of how the abuse has impacted your life. However, many successful cases proceed even without extensive documentation, as attorneys understand that survivors often don't have perfect evidence of abuse that occurred years or decades ago."
+        },
+        {
+          question: "Will I have to publicly share my story if I file a claim?",
+          answer: "Many LDS abuse cases resolve through confidential settlements before reaching a public trial. Your attorney can file court documents using your initials rather than your full name to protect your privacy. While the legal process may require you to share your experience with certain individuals like your legal team and potentially in depositions, this is different from making your story public. Your attorney will work to protect your privacy throughout the process."
+        }
+      ]
     }
   ];
 };

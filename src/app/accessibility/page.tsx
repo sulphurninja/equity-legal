@@ -77,8 +77,8 @@ const AccessibilityPage = () => {
         <h2 className="text-2xl font-semibold mt-8 mb-4">Feedback</h2>
         <p>We welcome your feedback on the accessibility of Lex Claim Connect. Please let us know if you encounter accessibility barriers:</p>
         <p>Email: support@lexclaimconnect.com</p>
-        <p>Phone: (908) 864-0126</p>
-        <p>Address: 613, Ridge Road, 201 Monmouth Junction, NJ, 08852</p>
+        <p>Phone: (908) 533-6944</p>
+        {/* <p>Address: 613, Ridge Road, 201 Monmouth Junction, NJ, 08852</p> */}
         <p>We try to respond to feedback within 3 business days.</p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Ongoing Improvements</h2>

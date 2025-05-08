@@ -201,8 +201,8 @@ const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-xs opacity-80">Call for Free Consultation</span>
-              <a href="tel:8001234567" className="hover:text-accent transition">
-                (908) 864-0126
+              <a href="tel:9085336944" className="hover:text-accent transition">
+                (908) 533-6944
               </a>
             </div>
           </div>

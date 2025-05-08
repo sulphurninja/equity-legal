@@ -123,8 +123,8 @@ const Footer = () => {
                 <Phone className="mr-3 mt-1 flex-shrink-0 text-accent group-hover:text-accent/80 transition-colors" size={18} />
                 <div>
                   <p className="font-medium text-sm text-primary-foreground/70 mb-1">Call Us</p>
-                  <a href="tel:9088640126" className="text-primary-foreground hover:text-accent transition-colors font-medium">
-                    (908) 864-0126
+                  <a href="tel:9085336944" className="text-primary-foreground hover:text-accent transition-colors font-medium">
+                    (908) 533-6944
                   </a>
                 </div>
               </div>
@@ -137,7 +137,7 @@ const Footer = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-start group">
+              {/* <div className="flex items-start group">
                 <MapPin className="mr-3 mt-1 flex-shrink-0 text-accent group-hover:text-accent/80 transition-colors" size={18} />
                 <div>
                   <p className="font-medium text-sm text-primary-foreground/70 mb-1">Our Office</p>
@@ -146,7 +146,7 @@ const Footer = () => {
                   NJ, 08852
                   </address>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

@@ -48,8 +48,8 @@ const DisclaimerPage = () => {
         <h2 className="text-2xl font-semibold mt-8 mb-4">10. Contact Information</h2>
         <p>If you have any questions about this disclaimer, please contact us at:</p>
         <p>Email: support@lexclaimconnect.com</p>
-        <p>Phone: (908) 864-0126</p>
-        <p>Address: 613, Ridge Road, 201 Monmouth Junction, NJ, 08852</p>
+        <p>Phone: (908) 533-6944</p>
+        {/* <p>Address: 613, Ridge Road, 201 Monmouth Junction, NJ, 08852</p> */}
       </div>
     </div>
   );

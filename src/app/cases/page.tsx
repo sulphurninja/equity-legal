@@ -69,25 +69,7 @@ export default function CasesPage() {
               <span className="font-bold text-accent"> Review our current cases to see if you qualify for compensation.</span>
             </p>
 
-            {/* Trust Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
-              
-              <div className="text-center">
-                <div className="bg-white/10 rounded-full p-3 sm:p-4 inline-flex items-center justify-center mb-2 sm:mb-3">
-                  <Users className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
-                </div>
-                <div className="font-black text-xl sm:text-2xl text-accent">10,000+</div>
-                <div className="text-xs sm:text-sm text-white/70">Clients Helped</div>
-              </div>
-             
-              <div className="text-center">
-                <div className="bg-white/10 rounded-full p-3 sm:p-4 inline-flex items-center justify-center mb-2 sm:mb-3">
-                  <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
-                </div>
-                <div className="font-black text-xl sm:text-2xl text-accent">No Fees</div>
-               
-              </div>
-            </div>
+           
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">

@@ -194,26 +194,7 @@ const Footer = () => {
           </div>
 
           {/* Trust Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
-            {trustStats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center group"
-                variants={itemVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-              >
-                <div className="bg-white/10 rounded-full p-3 sm:p-4 inline-flex items-center justify-center mb-3 group-hover:bg-white/20 transition-all duration-300">
-                  <stat.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${stat.color}`} />
-                </div>
-                <div className="font-black text-xl sm:text-2xl text-white mb-1">{stat.label}</div>
-                <div className="text-xs sm:text-sm text-white/70">{stat.sublabel}</div>
-              </motion.div>
-            ))}
-          </div>
+       
         </motion.div>
 
         {/* Main Footer Content */}

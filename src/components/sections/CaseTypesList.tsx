@@ -151,12 +151,7 @@ const CaseTypesList = () => {
                 Learn More 
                 <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
               </div>
-              <div className="flex items-center">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3 h-3 text-yellow-400 fill-current" />
-                ))}
-                <span className="text-xs text-gray-500 ml-1">4.9</span>
-              </div>
+             
             </div>
           </CardFooter>
         </Card>

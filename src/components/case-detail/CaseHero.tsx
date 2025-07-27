@@ -211,22 +211,7 @@ const CaseHero = ({ caseData }: CaseHeroProps) => {
                 </p>
 
                 {/* Urgency Notice */}
-                <Card className="bg-red-500/20 border-2 border-red-400/30 backdrop-blur-sm mb-6">
-                  <CardContent className="p-4 sm:p-6">
-                    <div className="flex items-start space-x-3">
-                      <div className="bg-red-500/30 rounded-full p-2 flex-shrink-0">
-                        <AlertCircle className="w-5 h-5 text-red-300" />
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-red-300 mb-2 text-sm sm:text-base">Time-Sensitive Legal Matter</h3>
-                        <p className="text-white/80 text-xs sm:text-sm leading-relaxed">
-                          Legal deadlines may apply to your claim. Many cases have statute of limitations that could prevent you from seeking compensation if you wait too long.
-                          <span className="font-bold text-accent"> Contact us immediately to protect your rights.</span>
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+              
 
                 {/* Main CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -260,7 +245,7 @@ const CaseHero = ({ caseData }: CaseHeroProps) => {
                     >
                       <a href="tel:9085336944" className="flex text-black items-center justify-center">
                         <Phone size={20} className="mr-2 sm:mr-3 text-black" />
-                        <span className="hidden text-black sm:inline">Call (908) 533-6944</span>
+                        <span className=" text-black sm:inline">Call (908) 533-6944</span>
                         <span className="sm:hidden ">Call Now</span>
                       </a>
                     </Button>
@@ -268,113 +253,12 @@ const CaseHero = ({ caseData }: CaseHeroProps) => {
                 </div>
 
                 {/* Trust Indicators */}
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-white/80 text-xs sm:text-sm">
-                  <div className="flex items-center">
-                    <Shield className="w-4 h-4 text-green-400 mr-2" />
-                    <span className="font-medium">No Upfront Fees</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Clock className="w-4 h-4 text-blue-400 mr-2" />
-                    <span className="font-medium">Free Consultation</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Star className="w-4 h-4 text-accent mr-2" />
-                    <span className="font-medium">98% Success Rate</span>
-                  </div>
-                </div>
+             
               </motion.div>
             </div>
 
             {/* Stats Sidebar */}
-            <motion.div
-              className="lg:col-span-1"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.8 }}
-            >
-              <Card className="bg-white/10 border-white/20 backdrop-blur-lg shadow-2xl">
-                <CardContent className="p-6">
-                  <div className="text-center mb-6">
-                    <Badge className="mb-3 px-3 py-1 bg-accent/20 text-accent border-accent/30 font-bold text-sm">
-                      <TrendingUp className="w-4 h-4 mr-2" />
-                      CASE STATISTICS
-                    </Badge>
-                    <h3 className="text-xl font-black text-white mb-2">
-                      {caseData.title} Cases
-                    </h3>
-                    <p className="text-white/70 text-sm">
-                      Our track record with similar cases
-                    </p>
-                  </div>
-
-                  <div className="space-y-6">
-                    {/* Potential Compensation */}
-                    <div className="text-center">
-                      <div className="bg-green-500/20 rounded-full p-4 inline-flex items-center justify-center mb-3">
-                        <DollarSign className="w-6 h-6 text-green-400" />
-                      </div>
-                      <div className="font-black text-2xl text-accent mb-1">{caseStats.potentialCompensation}</div>
-                      <div className="text-white/70 text-sm">Potential Compensation</div>
-                    </div>
-
-                    <Separator className="bg-white/20" />
-
-                    {/* Cases Won */}
-                    <div className="text-center">
-                      <div className="bg-blue-500/20 rounded-full p-4 inline-flex items-center justify-center mb-3">
-                        <Award className="w-6 h-6 text-blue-400" />
-                      </div>
-                      <div className="font-black text-2xl text-accent mb-1">{caseStats.casesWon}</div>
-                      <div className="text-white/70 text-sm">Similar Cases Won</div>
-                    </div>
-
-                    <Separator className="bg-white/20" />
-
-                    {/* Average Settlement */}
-                    <div className="text-center">
-                      <div className="bg-purple-500/20 rounded-full p-4 inline-flex items-center justify-center mb-3">
-                        <Users className="w-6 h-6 text-purple-400" />
-                      </div>
-                      <div className="font-black text-2xl text-accent mb-1">{caseStats.avgSettlement}</div>
-                      <div className="text-white/70 text-sm">Average Settlement</div>
-                    </div>
-                  </div>
-
-                  {/* Quick Action */}
-                  <div className="mt-8 pt-6 border-t border-white/20">
-                    <motion.div
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <Button
-                        className="w-full bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-black shadow-lg hover:shadow-xl transition-all duration-300"
-                        onClick={scrollToCaseEvaluation}
-                      >
-                        <Zap className="mr-2 h-4 w-4" />
-                        Start Free Review
-                      </Button>
-                    </motion.div>
-                    
-                    <p className="text-center text-white/60 text-xs mt-3">
-                      Takes less than 2 minutes
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Additional Trust Element */}
-              <Card className="mt-6 bg-gradient-to-br from-accent/20 to-yellow-400/20 border-accent/30 backdrop-blur-sm">
-                <CardContent className="p-4 text-center">
-                  <div className="flex items-center justify-center mb-2">
-                    <Shield className="w-5 h-5 text-accent mr-2" />
-                    <span className="font-bold text-accent text-sm">100% CONFIDENTIAL</span>
-                  </div>
-                  <p className="text-white/80 text-xs leading-relaxed">
-                    Your consultation is completely confidential and protected by attorney-client privilege.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
+         
           </div>
 
           {/* Share Button - Mobile Friendly */}

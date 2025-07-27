@@ -329,10 +329,7 @@ const CaseTypesList = () => {
                 <div className="font-bold text-xl text-accent">$0</div>
                 <div className="text-sm opacity-80">Upfront Fees</div>
               </div>
-              <div className="text-center">
-                <div className="font-bold text-xl text-accent">98%</div>
-                <div className="text-sm opacity-80">Success Rate</div>
-              </div>
+             
             </div>
           </div>
         </motion.div>

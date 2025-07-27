@@ -179,10 +179,7 @@ const ClaimProcess = () => {
               <Clock className="w-5 h-5 text-blue-500 mr-2" />
               <span className="font-medium">Free Consultation</span>
             </div>
-            <div className="flex items-center text-gray-600">
-              <Users className="w-5 h-5 text-purple-500 mr-2" />
-              <span className="font-medium">10,000+ Clients</span>
-            </div>
+          
           </div>
         </motion.div>
 
@@ -397,10 +394,7 @@ const ClaimProcess = () => {
                   <div className="font-black text-2xl text-accent">24/7</div>
                   <div className="text-sm opacity-80">Available</div>
                 </div>
-                <div className="text-center">
-                  <div className="font-black text-2xl text-accent">98%</div>
-                  <div className="text-sm opacity-80">Success Rate</div>
-                </div>
+              
               </div>
             </div>
           </div>

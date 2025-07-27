@@ -14,15 +14,15 @@ import { getCaseBySlug } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Clock, 
-  Phone, 
-  Shield, 
-  DollarSign, 
-  Users, 
-  Award, 
-  CheckCircle, 
-  ArrowRight, 
+import {
+  Clock,
+  Phone,
+  Shield,
+  DollarSign,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
   AlertCircle,
   Zap,
   TrendingUp,
@@ -70,46 +70,13 @@ export default async function CaseDetailPage({
   return (
     <main className="flex min-h-screen flex-col">
       <Header />
-      
+
       {/* Enhanced Case Hero */}
       <CaseHero caseData={caseData} />
-
-      {/* Quick Action Bar - Sticky on Mobile */}
-      <div className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-            <div className="flex items-center space-x-4 text-sm">
-              <Badge className="bg-green-500/10 text-green-700 border-green-500/20">
-                <CheckCircle className="w-3 h-3 mr-1" />
-                Active Case
-              </Badge>
-              <Badge className="bg-red-500/10 text-red-700 border-red-500/20">
-                <Clock className="w-3 h-3 mr-1" />
-                Limited Time
-              </Badge>
-              <Badge className="bg-blue-500/10 text-blue-700 border-blue-500/20">
-                <Shield className="w-3 h-3 mr-1" />
-                No Win, No Fee
-              </Badge>
-            </div>
-            
-            <div className="flex items-center space-x-3">
-              <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-primary font-bold">
-                <Link href="#case-evaluation">
-                  <FileText className="w-4 h-4 mr-2" />
-                  Free Review
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="sm" className="border-2 border-primary text-primary hover:bg-primary/10">
-                <a href="tel:9085336944" className="flex items-center">
-                  <Phone className="w-4 h-4 mr-2" />
-                  <span className="hidden sm:inline">Call </span>(908) 533-6944
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <section id='#casereview'>
+        <CaseEvaluation />
+      </section>
+     
 
       {/* Trust Banner */}
       <section className="bg-gradient-to-r from-primary/5 to-blue-500/5 py-8 sm:py-12">
@@ -123,32 +90,7 @@ export default async function CaseDetailPage({
             </p>
           </div>
 
-          <div className="grid grid-cols-2  gap-4 sm:gap-6">
-           
-            <div className="text-center group">
-              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full p-3 sm:p-4 inline-flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                <Users className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-              </div>
-              <div className="font-black text-xl sm:text-2xl text-primary">10,000+</div>
-              <div className="text-xs sm:text-sm text-gray-600">Clients Helped</div>
-            </div>
 
-            <div className="text-center group">
-              <div className="bg-gradient-to-br from-purple-500 to-violet-600 rounded-full p-3 sm:p-4 inline-flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                <Award className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-              </div>
-              <div className="font-black text-xl sm:text-2xl text-primary">98%</div>
-              <div className="text-xs sm:text-sm text-gray-600">Success Rate</div>
-            </div>
-
-            <div className="text-center group">
-              <div className="bg-gradient-to-br from-accent to-yellow-400 rounded-full p-3 sm:p-4 inline-flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-              </div>
-              <div className="font-black text-xl sm:text-2xl text-primary">No Fees</div>
-              <div className="text-xs sm:text-sm text-gray-600">Unless We Win</div>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -204,7 +146,7 @@ export default async function CaseDetailPage({
                     <ArrowRight className="ml-3 h-5 w-5" />
                   </Link>
                 </Button>
-                
+
                 <Button asChild variant="outline" size="lg" className="border-2 border-red-300 text-red-700 hover:bg-red-50 font-bold px-8 py-6 text-lg w-full sm:w-auto">
                   <a href="tel:9085336944">
                     <Phone className="mr-3 h-5 w-5" />

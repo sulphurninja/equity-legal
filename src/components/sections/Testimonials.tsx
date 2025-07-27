@@ -74,10 +74,6 @@ const Testimonials = () => {
     }
   ];
 
-  const stats = [
-    { number: "10,000+", label: "Clients Helped", icon: Users },
-    { number: "98%", label: "Success Rate", icon: Award },
-  ];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -195,30 +191,7 @@ const Testimonials = () => {
           </motion.div>
 
           {/* Success Statistics */}
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center group"
-                whileHover={{ scale: 1.05, y: -5 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Card className="border-none shadow-lg bg-white/80 backdrop-blur-sm group-hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6 sm:p-8">
-                    <div className="bg-gradient-to-br from-primary/10 to-blue-500/10 rounded-full p-4 sm:p-6 inline-flex items-center justify-center mb-4 group-hover:from-primary/20 group-hover:to-blue-500/20 transition-all duration-300">
-                      <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
-                    </div>
-                    <div className="text-3xl sm:text-4xl font-black text-primary mb-2">{stat.number}</div>
-                    <div className="text-gray-600 font-medium">{stat.label}</div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-
+       
           {/* Main Testimonial Carousel */}
           <motion.div variants={itemVariants} className="relative max-w-5xl mx-auto">
             <div className="relative overflow-hidden rounded-3xl">

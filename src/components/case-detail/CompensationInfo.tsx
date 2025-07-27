@@ -471,17 +471,7 @@ const CompensationInfo = ({ caseData }: CompensationInfoProps) => {
                 </div>
 
                 {/* Trust Indicators */}
-                <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-white/80 text-sm">
-                  <div className="flex items-center">
-                    <Shield className="w-4 h-4 text-green-400 mr-2" />
-                    <span>No Win, No Fee</span>
-                  </div>
-                 
-                  <div className="flex items-center">
-                    <Award className="w-4 h-4 text-accent mr-2" />
-                    <span>98% Success Rate</span>
-                  </div>
-                </div>
+              
               </CardContent>
             </Card>
           </motion.div>

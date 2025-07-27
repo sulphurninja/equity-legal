@@ -79,13 +79,7 @@ export default function CasesPage() {
                 <div className="font-black text-xl sm:text-2xl text-accent">10,000+</div>
                 <div className="text-xs sm:text-sm text-white/70">Clients Helped</div>
               </div>
-              <div className="text-center">
-                <div className="bg-white/10 rounded-full p-3 sm:p-4 inline-flex items-center justify-center mb-2 sm:mb-3">
-                  <Award className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400" />
-                </div>
-                <div className="font-black text-xl sm:text-2xl text-accent">98%</div>
-                <div className="text-xs sm:text-sm text-white/70">Success Rate</div>
-              </div>
+             
               <div className="text-center">
                 <div className="bg-white/10 rounded-full p-3 sm:p-4 inline-flex items-center justify-center mb-2 sm:mb-3">
                   <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
@@ -381,20 +375,7 @@ export default function CasesPage() {
             </div>
 
             {/* Final Trust Indicators */}
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-8 text-white/80">
-              <div className="flex items-center">
-                <Shield className="w-5 h-5 text-green-400 mr-2" />
-                <span className="font-medium">No Win, No Fee</span>
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 text-blue-400 mr-2" />
-                <span className="font-medium">24/7 Support</span>
-              </div>
-              <div className="flex items-center">
-                <Award className="w-5 h-5 text-accent mr-2" />
-                <span className="font-medium">98% Success Rate</span>
-              </div>
-            </div>
+         
           </div>
         </div>
       </section>

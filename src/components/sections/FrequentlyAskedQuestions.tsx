@@ -380,30 +380,7 @@ const FrequentlyAskedQuestions = () => {
             </Card>
 
             {/* Quick Stats */}
-            <Card className="border-none shadow-lg bg-white/80 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <h4 className="font-bold text-primary mb-4 flex items-center text-base sm:text-lg">
-                  <Users className="w-5 h-5 mr-2" />
-                  Why Clients Trust Us
-                </h4>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600 text-sm">Success Rate</span>
-                    <span className="font-bold text-primary">98%</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600 text-sm">Cases Won</span>
-                    <span className="font-bold text-primary">10,000+</span>
-                  </div>
-                
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-600 text-sm">Response Time</span>
-                    <span className="font-bold text-primary">24 Hours</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
+           
             {/* Urgency Card */}
             <Card className="border-2 border-red-200 bg-gradient-to-br from-red-50 to-orange-50 shadow-lg">
               <CardContent className="p-6">

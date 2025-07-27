@@ -362,10 +362,7 @@ const CaseFAQ = ({ caseData }: CaseFAQProps) => {
                       <span className="text-gray-600 text-sm">Cases Filed</span>
                       <span className="font-bold text-primary">2,500+</span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-600 text-sm">Success Rate</span>
-                      <span className="font-bold text-primary">98%</span>
-                    </div>
+                   
                     <div className="flex items-center justify-between">
                       <span className="text-gray-600 text-sm">Avg Settlement</span>
                       <span className="font-bold text-primary">$125,000</span>

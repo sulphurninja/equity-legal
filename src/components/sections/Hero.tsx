@@ -13,19 +13,7 @@ const Hero = () => {
   const [currentStat, setCurrentStat] = useState(0);
   const controls = useAnimation();
 
-  const stats = [
-    
-    { icon: Users, number: "10,000+", text: "Clients Helped", color: "text-blue-400" },
-    { icon: TrendingUp, number: "98%", text: "Success Rate", color: "text-purple-400" },
-    { icon: Shield, number: "4+", text: "Years of Excellence", color: "text-yellow-400" }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [stats.length]);
+ 
 
   useEffect(() => {
     controls.start({
@@ -123,7 +111,7 @@ const Hero = () => {
               className="border-accent/50 bg-accent/10 text-accent px-6 py-2 mb-8 font-bold text-sm backdrop-blur-sm hover:bg-accent/20 transition-all duration-300"
             >
               <Shield className="w-4 h-4 mr-2" />
-              TRUSTED BY 10,000+ CLIENTS
+              FREE 24/7 Consultation
             </Badge>
           </motion.div>
 
@@ -230,7 +218,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Trust Indicators */}
-          <motion.div
+          {/* <motion.div
             className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12"
             variants={itemVariants}
           >
@@ -268,7 +256,7 @@ const Hero = () => {
                 </motion.div>
               );
             })}
-          </motion.div>
+          </motion.div> */}
 
           {/* Social Proof */}
           <motion.div

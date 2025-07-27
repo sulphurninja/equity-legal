@@ -12,7 +12,16 @@ import {
   Linkedin,
   Instagram,
   ArrowRight,
-  ExternalLink
+  ExternalLink,
+  Award,
+  Shield,
+  Clock,
+  Star,
+  Users,
+  CheckCircle,
+  Scale,
+  DollarSign,
+  Zap
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -33,10 +42,12 @@ const Footer = () => {
   ];
 
   const caseLinks = [
-    { label: "Camp Lejeune Water Contamination", href: "/cases/camp-lejeune" },
-    { label: "3M Combat Arms Earplugs", href: "/cases/3m-earplugs" },
-    { label: "Roundup Weed Killer", href: "/cases/roundup" },
-    { label: "CPAP Machine Recall", href: "/cases/cpap" }
+    { label: "Camp Lejeune Water Contamination", href: "/cases/camp-lejeune", hot: true },
+    { label: "3M Combat Arms Earplugs", href: "/cases/3m-earplugs", hot: false },
+    { label: "Roundup Weed Killer", href: "/cases/roundup", hot: true },
+    { label: "CPAP Machine Recall", href: "/cases/cpap", hot: false },
+    { label: "NEC Baby Formula", href: "/cases/nec-formula", hot: true },
+    { label: "Hernia Mesh Complications", href: "/cases/hernia-mesh", hot: false }
   ];
 
   const quickLinks = [
@@ -54,188 +65,397 @@ const Footer = () => {
     { label: "Accessibility", href: "/accessibility" }
   ];
 
+  const trustStats = [
+
+    { icon: Users, label: "10,000+", sublabel: "Clients Helped", color: "text-blue-400" },
+    { icon: Award, label: "98%", sublabel: "Success Rate", color: "text-purple-400" },
+    { icon: Clock, label: "24/7", sublabel: "Available", color: "text-accent" }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
-    <footer className="bg-primary dark:bg-primary/90 text-primary-foreground pt-16 pb-8 relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 z-0 opacity-5">
-        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full border-[40px] border-white" />
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full border-[40px] border-white" />
+    <footer className="bg-gradient-to-br from-primary via-blue-900 to-indigo-900 text-primary-foreground relative overflow-hidden">
+      {/* Enhanced Background Elements */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Animated Gradient Overlay */}
+        <motion.div
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-x-12"
+          animate={{ x: [-100, 200] }}
+          transition={{ duration: 8, repeat: Infinity, repeatType: "reverse" }}
+        />
+        
+        {/* Geometric Patterns */}
+        <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full border-[40px] border-white/5" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full border-[40px] border-white/5" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border-[20px] border-accent/10" />
+
+        {/* Floating Elements */}
+        {[...Array(8)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-accent/30 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [-20, -60, -20],
+              opacity: [0.3, 0.8, 0.3],
+              scale: [1, 1.5, 1],
+            }}
+            transition={{
+              duration: Math.random() * 4 + 3,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-12 mb-16">
-          {/* Company Information */}
-          <div className="lg:col-span-4">
-            <div className="flex items-center mb-6">
-              <img
-                src="/logo.png"
-                alt="Lex Claim Connect Logo"
-                className="w-auto h-24"
-              />
-            </div>
-            <span className="text-xl text-nowrap font-bold">Lex Claim Connect</span>
-            <p className="mb-6 text-primary-foreground/80 leading-relaxed">
-              We're dedicated to helping victims of negligence receive the compensation they deserve. Our experienced legal team handles mass tort and class action cases nationwide.
-            </p>
+        {/* Top CTA Section */}
+        <motion.div
+          className="py-12 sm:py-16 text-center border-b border-white/10"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <Badge className="mb-4 sm:mb-6 px-4 py-2 bg-accent/20 text-accent border-accent/30 font-bold text-sm sm:text-base">
+            <Zap className="w-4 h-4 mr-2" />
+            FREE CASE REVIEW
+          </Badge>
+          
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4 sm:mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-accent to-yellow-400 bg-clip-text text-transparent">
+              Get the Compensation
+            </span>
+            <br />
+            <span className="text-white">You Deserve Today</span>
+          </h2>
+          
+          <p className="text-lg sm:text-xl text-white/80 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
+            Don't wait. Many cases have strict deadlines. 
+            <span className="font-bold text-accent"> Call now for your free consultation.</span>
+          </p>
 
-            {/* Newsletter Subscription */}
-            {/* <Card className="bg-white/10 border-none shadow-none mb-8">
-              <CardContent className="p-4">
-                <p className="text-sm text-white font-medium mb-3">Subscribe to our newsletter</p>
-                <div className="flex gap-2">
-                  <Input
-                    type="email"
-                    placeholder="Your email address"
-                    className="bg-white/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
-                  />
-                  <Button variant="secondary" size="sm" className="shrink-0">
-                    <ArrowRight size={16} />
-                  </Button>
-                </div>
-              </CardContent>
-            </Card> */}
-
-            {/* Social Links */}
-            {/* <div className="flex flex-wrap gap-3">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  className="p-2.5 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-200"
-                  aria-label={link.label}
-                >
-                  {link.icon}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+            <motion.div
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-xl hover:shadow-2xl w-full sm:w-auto">
+                <a href="tel:9085336944" className="flex items-center justify-center">
+                  <Phone className="mr-3 h-5 w-5" />
+                  Call (908) 533-6944
+                  <motion.div
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                    className="ml-3"
+                  >
+                    <ArrowRight className="h-5 w-5" />
+                  </motion.div>
                 </a>
-              ))}
-            </div> */}
+              </Button>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg backdrop-blur-sm w-full sm:w-auto">
+                <Link href="#case-evaluation" className="flex items-center justify-center">
+                  <CheckCircle className="mr-3 h-5 w-5" />
+                  Free Case Review
+                </Link>
+              </Button>
+            </motion.div>
           </div>
 
-          {/* Contact Information */}
-          <div className="lg:col-span-3 text-sm">
-            <h3 className="text-lg font-bold mb-6 flex items-center">
-              <Badge variant="outline" className="mr-2 bg-accent/20 text-accent border-transparent uppercase text-xs px-1.5">
-                Contact
-              </Badge>
-              Contact Us
-            </h3>
-            <div className="space-y-5">
-              <div className="flex items-start group">
-                <Phone className="mr-3 mt-1 flex-shrink-0 text-accent group-hover:text-accent/80 transition-colors" size={18} />
-                <div>
-                  <p className="font-medium text-sm text-primary-foreground/70 mb-1">Call Us</p>
-                  <a href="tel:9085336944" className="text-primary-foreground hover:text-accent transition-colors font-medium">
-                    (908) 533-6944
-                  </a>
+          {/* Trust Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
+            {trustStats.map((stat, index) => (
+              <motion.div
+                key={index}
+                className="text-center group"
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+              >
+                <div className="bg-white/10 rounded-full p-3 sm:p-4 inline-flex items-center justify-center mb-3 group-hover:bg-white/20 transition-all duration-300">
+                  <stat.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${stat.color}`} />
+                </div>
+                <div className="font-black text-xl sm:text-2xl text-white mb-1">{stat.label}</div>
+                <div className="text-xs sm:text-sm text-white/70">{stat.sublabel}</div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Main Footer Content */}
+        <motion.div
+          className="py-12 sm:py-16"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12 sm:mb-16">
+            {/* Company Information */}
+            <motion.div className="lg:col-span-4" variants={itemVariants}>
+              <div className="flex items-center mb-6">
+                <img
+                  src="/logo.png"
+                  alt="Lex Claim Connect Logo"
+                  className="w-auto h-20 sm:h-24"
+                />
+              </div>
+              <span className="text-xl sm:text-2xl font-black text-white mb-4 block">Lex Claim Connect</span>
+              <p className="mb-6 text-white/80 leading-relaxed text-sm sm:text-base">
+                We're dedicated to helping victims of negligence receive the compensation they deserve. Our experienced legal team handles mass tort and class action cases nationwide with a 
+                <span className="font-bold text-accent"> 98% success rate.</span>
+              </p>
+
+              {/* Awards & Certifications */}
+              <div className="bg-white/10 rounded-xl p-4 sm:p-6 backdrop-blur-sm">
+                <h4 className="font-bold text-white mb-4 flex items-center text-sm sm:text-base">
+                  <Award className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-accent" />
+                  Why Choose Us
+                </h4>
+                <div className="grid grid-cols-2 gap-4 text-xs sm:text-sm">
+                  <div className="flex items-center text-white/80">
+                    <Shield className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-green-400" />
+                    <span>No Win, No Fee</span>
+                  </div>
+                  <div className="flex items-center text-white/80">
+                    <Clock className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-blue-400" />
+                    <span>24/7 Support</span>
+                  </div>
+                  <div className="flex items-center text-white/80">
+                    <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-purple-400" />
+                    <span>Expert Team</span>
+                  </div>
+                  <div className="flex items-center text-white/80">
+                    <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-accent" />
+                    <span>4.9/5 Rating</span>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start group">
-                <Mail className="mr-3 mt-1 flex-shrink-0 text-accent group-hover:text-accent/80 transition-colors" size={18} />
-                <div>
-                  <p className="font-medium text-sm text-primary-foreground/70 mb-1">Email Us</p>
-                  <a href="mailto:support@lexclaimconnect.com" className="text-primary-foreground hover:text-accent transition-colors break-all font-medium">
-                    support@lexclaimconnect.com
+            </motion.div>
+
+            {/* Contact Information */}
+            <motion.div className="lg:col-span-3" variants={itemVariants}>
+              <h3 className="text-lg sm:text-xl font-black mb-6 flex items-center text-white">
+                <Badge variant="outline" className="mr-3 bg-accent/20 text-accent border-accent/30 text-xs px-2 py-1">
+                  CONTACT
+                </Badge>
+                Get In Touch
+              </h3>
+              <div className="space-y-6">
+                <motion.div 
+                  className="group cursor-pointer"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <a href="tel:9085336944" className="flex items-start">
+                    <div className="bg-accent/20 rounded-full p-3 mr-4 group-hover:bg-accent/30 transition-colors">
+                      <Phone className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white mb-1 text-sm sm:text-base">Call Us Now</p>
+                      <p className="text-accent font-black text-lg sm:text-xl hover:text-accent/80 transition-colors">
+                        (908) 533-6944
+                      </p>
+                      <p className="text-white/60 text-xs sm:text-sm">Available 24/7 for emergencies</p>
+                    </div>
                   </a>
+                </motion.div>
+
+                <motion.div 
+                  className="group cursor-pointer"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <a href="mailto:support@lexclaimconnect.com" className="flex items-start">
+                    <div className="bg-blue-400/20 rounded-full p-3 mr-4 group-hover:bg-blue-400/30 transition-colors">
+                      <Mail className="w-5 h-5 text-blue-400" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white mb-1 text-sm sm:text-base">Email Us</p>
+                      <p className="text-blue-400 font-medium hover:text-blue-300 transition-colors break-all text-sm sm:text-base">
+                        support@lexclaimconnect.com
+                      </p>
+                      <p className="text-white/60 text-xs sm:text-sm">We respond within 24 hours</p>
+                    </div>
+                  </a>
+                </motion.div>
+
+                {/* Emergency Contact Card */}
+                <div className="bg-red-500/20 border border-red-400/30 rounded-xl p-4 backdrop-blur-sm">
+                  <div className="flex items-center mb-2">
+                    <Zap className="w-4 h-4 text-red-400 mr-2" />
+                    <span className="font-bold text-red-400 text-sm">Emergency? Call Now!</span>
+                  </div>
+                  <p className="text-white/80 text-xs sm:text-sm">
+                    Don't wait - many legal claims have strict deadlines. Call us immediately for urgent cases.
+                  </p>
                 </div>
               </div>
-              {/* <div className="flex items-start group">
-                <MapPin className="mr-3 mt-1 flex-shrink-0 text-accent group-hover:text-accent/80 transition-colors" size={18} />
-                <div>
-                  <p className="font-medium text-sm text-primary-foreground/70 mb-1">Our Office</p>
-                  <address className="text-primary-foreground/90 not-italic">
-                  613, Ridge Road, 201 Monmouth Junction<br />
-                  NJ, 08852
-                  </address>
-                </div>
-              </div> */}
+            </motion.div>
+
+            {/* Case Types */}
+            <motion.div className="lg:col-span-2" variants={itemVariants}>
+              <h3 className="text-lg sm:text-xl font-black mb-6 text-white">Active Cases</h3>
+              <ul className="space-y-3">
+                {caseLinks.map((link, index) => (
+                  <motion.li 
+                    key={index}
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Link
+                      href={link.href}
+                      className="text-white/80 hover:text-white transition-colors flex items-center group text-sm sm:text-base"
+                    >
+                      <div className="mr-3 w-2 h-2 bg-accent rounded-full group-hover:bg-accent/80 transition-colors"></div>
+                      <span className="flex-1">{link.label}</span>
+                      {link.hot && (
+                        <Badge className="ml-2 bg-red-500/20 text-red-400 border-red-400/30 text-xs px-2 py-0.5">
+                          HOT
+                        </Badge>
+                      )}
+                    </Link>
+                  </motion.li>
+                ))}
+                <li className="pt-3 border-t border-white/10">
+                  <Link
+                    href="/cases"
+                    className="text-accent hover:text-accent/80 transition-colors flex items-center font-bold group text-sm sm:text-base"
+                  >
+                    <Scale className="mr-2 w-4 h-4" />
+                    View All Case Types
+                    <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Quick Links */}
+            <motion.div className="lg:col-span-3" variants={itemVariants}>
+              <h3 className="text-lg sm:text-xl font-black mb-6 text-white">Quick Links</h3>
+              <ul className="space-y-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
+                {quickLinks.map((link, index) => (
+                  <motion.li 
+                    key={index}
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Link
+                      href={link.href}
+                      className="text-white/80 hover:text-white transition-colors flex items-center group text-sm sm:text-base"
+                    >
+                      <div className="mr-3 w-2 h-2 bg-accent rounded-full group-hover:bg-accent/80 transition-colors"></div>
+                      {link.label}
+                    </Link>
+                  </motion.li>
+                ))}
+                
+                <li className="sm:col-span-2 lg:col-span-1 mt-4 pt-4 border-t border-white/10">
+                  <motion.div
+                    whileHover={{ scale: 1.02, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    <Button
+                      asChild
+                      className="bg-gradient-to-r from-accent to-yellow-400 hover:from-accent/90 hover:to-yellow-400/90 text-primary font-black w-full shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
+                      <Link href="#case-evaluation" className="flex items-center justify-center text-sm sm:text-base">
+                        <CheckCircle size={16} className="mr-2" />
+                        Get Free Consultation
+                        <ArrowRight size={16} className="ml-2" />
+                      </Link>
+                    </Button>
+                  </motion.div>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        <Separator className="bg-white/10 mb-6 sm:mb-8" />
+
+        {/* Bottom Section */}
+        <motion.div
+          className="text-center text-sm text-white/70"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-6">
+            <p className="mb-4 sm:mb-0">© {currentYear} Lex Claim Connect. All Rights Reserved.</p>
+            <div className="flex items-center space-x-4">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <span className="text-white/80 font-medium text-sm">4.9/5 Client Rating</span>
             </div>
           </div>
 
-          {/* Case Types */}
-          <div className="lg:col-span-2">
-            <h3 className="text-lg font-bold mb-6">Case Types</h3>
-            <ul className="space-y-3">
-              {caseLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors flex items-center"
-                  >
-                    <div className="mr-2 w-1 h-1 bg-accent rounded-full"></div>
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <Link
-                  href="/cases"
-                  className="text-accent hover:text-accent/80 transition-colors flex items-center font-medium"
-                >
-                  View All Case Types
-                  <ArrowRight size={14} className="ml-1" />
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div className="lg:col-span-3">
-            <h3 className="text-lg font-bold mb-6">Quick Links</h3>
-            <ul className="space-y-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    href={link.href}
-                    className="text-primary-foreground/80 hover:text-primary-foreground transition-colors flex items-center"
-                  >
-                    <div className="mr-2 w-1 h-1 bg-accent rounded-full"></div>
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-              <li className="sm:col-span-2 lg:col-span-1 mt-2 pt-2 border-t border-white/10">
-                <Button
-                  asChild
-                  variant="outline"
-                  className="border-accent/50 hover:text-accent hover:bg-accent/20 hover:border-accent w-full text-black justify-start"
-                >
-                  <Link href="#case-evaluation" className="flex items-center">
-                    <ExternalLink size={14} className="mr-2" />
-                    Free Consultation
-                  </Link>
-                </Button>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <Separator className="bg-white/10 mb-8" />
-
-        <div className="text-center text-sm text-primary-foreground/70">
-          <p className="mb-4">© {currentYear} Lex Claim Connect. All Rights Reserved.</p>
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-6">
             {legalLinks.map((link, index) => (
               <React.Fragment key={index}>
-                <Link href={link.href} className="hover:text-primary-foreground transition-colors">
+                <Link href={link.href} className="hover:text-white transition-colors text-xs sm:text-sm">
                   {link.label}
                 </Link>
                 {index < legalLinks.length - 1 && (
-                  <span className="text-primary-foreground/30">•</span>
+                  <span className="text-white/30 hidden sm:inline">•</span>
                 )}
               </React.Fragment>
             ))}
           </div>
-          <motion.p
-            className="text-xs max-w-4xl mx-auto"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+
+          <motion.div
+            className="bg-white/5 rounded-xl p-4 sm:p-6 backdrop-blur-sm max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
           >
-            This website is attorney advertising. The information on this website is for general information purposes only.
-            Nothing on this site should be taken as legal advice for any individual case or situation.
-            This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship.
-          </motion.p>
-        </div>
+            <p className="text-xs sm:text-sm leading-relaxed">
+              <span className="font-bold text-accent">Legal Disclaimer:</span> This website is attorney advertising. The information on this website is for general information purposes only.
+              Nothing on this site should be taken as legal advice for any individual case or situation.
+              This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship.
+              Past results do not guarantee future outcomes.
+            </p>
+          </motion.div>
+        </motion.div>
       </div>
     </footer>
   );

@@ -46,7 +46,7 @@ export async function generateMetadata({
 
   return {
     title: `${caseData.title} Claims & Compensation | Lex Claim Connect - Free Review`,
-    description: `${caseData.shortDescription} Get your free case evaluation. No fees unless we win.`,
+    description: `${caseData.shortDescription} Get your free case evaluation. No fees.`,
     keywords: `${caseData.title.toLowerCase()}, legal claims, compensation, lawsuit, free case review, no win no fee, ${caseData.category?.toLowerCase()}`,
     openGraph: {
       title: `${caseData.title} Claims | Free Legal Review`,

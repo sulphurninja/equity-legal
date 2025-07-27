@@ -10,7 +10,7 @@ import { getAllCaseTypes } from "@/lib/utils";
 
 export const metadata = {
   title: "Active Mass Tort & Class Action Cases | Lex Claim Connect - Free Review",
-  description: "View all active mass tort and class action cases. Get your free case evaluation today. No fees unless we win.",
+  description: "View all active mass tort and class action cases. Get your free case evaluation today. ",
   keywords: "mass tort cases, class action lawsuits, legal claims, compensation, free case review, no win no fee"
 };
 
@@ -85,7 +85,7 @@ export default function CasesPage() {
                   <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
                 </div>
                 <div className="font-black text-xl sm:text-2xl text-accent">No Fees</div>
-                <div className="text-xs sm:text-sm text-white/70">Unless We Win</div>
+               
               </div>
             </div>
 
@@ -356,7 +356,7 @@ export default function CasesPage() {
             
             <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
               Our expert legal team can help determine if you qualify for compensation based on your specific situation.
-              <span className="font-bold text-accent"> No fees unless we win your case.</span>
+              <span className="font-bold text-accent"> No fees</span>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8">

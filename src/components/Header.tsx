@@ -80,10 +80,10 @@ const Header = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse" />
             <div className="container mx-auto px-4">
               <div className="flex items-center justify-center space-x-6 text-sm font-medium">
-                <div className="flex items-center space-x-2">
+                {/* <div className="flex items-center space-x-2">
                   <Shield className="w-4 h-4" />
                   <span>No Fees Unless We Win</span>
-                </div>
+                </div> */}
                 {/* <div className="hidden sm:flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4" />
                   <span>$500M+ Recovered</span>
@@ -232,7 +232,7 @@ const Header = () => {
                           <div className="flex items-center justify-between">
                             <div>
                               <h5 className="text-white font-bold text-lg">Ready to Get Started?</h5>
-                              <p className="text-white/90 text-sm">Free consultation • No fees unless we win</p>
+                              <p className="text-white/90 text-sm">Free consultation • No fees </p>
                             </div>
                             <Button asChild className="bg-accent hover:bg-accent/90 text-primary font-bold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                               <Link href="#case-evaluation">

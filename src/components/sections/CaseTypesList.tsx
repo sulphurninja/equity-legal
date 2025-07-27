@@ -206,7 +206,7 @@ const CaseTypesList = () => {
            
             <div className="flex items-center text-gray-600">
               <Shield className="w-5 h-5 text-blue-500 mr-2" />
-              <span className="font-medium">No Fees Unless We Win</span>
+              <span className="font-medium">No Fees</span>
             </div>
             <div className="flex items-center text-gray-600">
               <Clock className="w-5 h-5 text-purple-500 mr-2" />

@@ -263,32 +263,8 @@ const Hero = () => {
             className="flex items-center justify-center space-x-8 text-gray-300"
             variants={itemVariants}
           >
-            <motion.div 
-              className="flex items-center space-x-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              <div className="flex items-center">
-                {[...Array(5)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 1 + i * 0.1 }}
-                  >
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  </motion.div>
-                ))}
-              </div>
-              <span className="text-sm font-medium">4.9/5 Client Rating</span>
-            </motion.div>
-
-            <motion.div 
-              className="flex items-center space-x-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              <Award className="w-5 h-5 text-accent" />
-              <span className="text-sm font-medium">Award-Winning Firm</span>
-            </motion.div>
+         
+           
 
             <motion.div 
               className="hidden md:flex items-center space-x-2"

@@ -54,7 +54,7 @@ const CaseFAQ = ({ caseData }: CaseFAQProps) => {
   const commonFAQs = [
     {
       question: "How much does it cost to hire your firm?",
-      answer: "Nothing upfront! We work on a contingency fee basis, which means you pay no attorney fees unless we successfully recover compensation for you. Our fee comes as a percentage of your settlement or award, so we're motivated to get you the maximum compensation possible.",
+      answer: "Nothing upfront! We work on a contingency fee basis, which means you pay no attorney fees. Our fee comes as a percentage of your settlement or award, so we're motivated to get you the maximum compensation possible.",
       category: "general",
       icon: DollarSign
     },

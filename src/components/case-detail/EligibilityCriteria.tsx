@@ -305,32 +305,7 @@ const EligibilityCriteria = ({ caseData }: EligibilityCriteriaProps) => {
               </Card>
 
               {/* Success Stats */}
-              <Card className="border-none shadow-lg bg-white/80 backdrop-blur-sm">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-primary mb-4 flex items-center text-base sm:text-lg">
-                    <Award className="w-5 h-5 mr-2" />
-                    Our Success Record
-                  </h4>
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-600 text-sm">Qualification Rate</span>
-                      <span className="font-bold text-green-600">{qualificationRate}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-600 text-sm">Average Settlement</span>
-                      <span className="font-bold text-green-600">$125,000</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-600 text-sm">Cases Won</span>
-                      <span className="font-bold text-green-600">2,500+</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-600 text-sm">Success Rate</span>
-                      <span className="font-bold text-green-600">98%</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+             
 
               {/* Contact Card */}
               <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-blue-500/5 shadow-lg">

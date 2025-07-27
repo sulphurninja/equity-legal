@@ -240,10 +240,7 @@ const Footer = () => {
                     <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-purple-400" />
                     <span>Expert Team</span>
                   </div>
-                  <div className="flex items-center text-white/80">
-                    <Star className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-accent" />
-                    <span>4.9/5 Rating</span>
-                  </div>
+                 
                 </div>
               </div>
             </motion.div>
@@ -399,14 +396,7 @@ const Footer = () => {
         >
           <div className="flex flex-col sm:flex-row items-center justify-between mb-6">
             <p className="mb-4 sm:mb-0">© {currentYear} Lex Claim Connect. All Rights Reserved.</p>
-            <div className="flex items-center space-x-4">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <span className="text-white/80 font-medium text-sm">4.9/5 Client Rating</span>
-            </div>
+           
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-6">

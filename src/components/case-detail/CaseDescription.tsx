@@ -218,40 +218,7 @@ const CaseDescription = ({ caseData }: CaseDescriptionProps) => {
                 </CardContent>
               </Card>
 
-              {/* Case Timeline */}
-              <Card className="border-none shadow-xl bg-white/80 backdrop-blur-sm">
-                <CardContent className="p-6 sm:p-8">
-                  <div className="flex items-center mb-6">
-                    <div className="bg-blue-500/10 rounded-full p-3 mr-4">
-                      <Calendar className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <h3 className="text-2xl font-black text-primary">Case Timeline</h3>
-                  </div>
-
-                  <div className="space-y-6">
-                    {caseTimeline.map((item, index) => (
-                      <div key={index} className="flex items-start space-x-4">
-                        <div className={`flex-shrink-0 w-4 h-4 rounded-full mt-1 ${
-                          item.status === 'completed' ? 'bg-green-500' :
-                          item.status === 'current' ? 'bg-blue-500 ring-4 ring-blue-200' :
-                          'bg-gray-300'
-                        }`} />
-                        <div className="flex-1 pb-6 border-l border-gray-200 pl-6 ml-2 last:border-l-0">
-                          <div className="flex items-center justify-between mb-2">
-                            <span className="font-bold text-primary">{item.date}</span>
-                            {item.status === 'current' && (
-                              <Badge className="bg-blue-500/10 text-blue-700 border-blue-500/20 text-xs">
-                                CURRENT
-                              </Badge>
-                            )}
-                          </div>
-                          <p className="text-gray-600">{item.event}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+            
             </motion.div>
 
             {/* Sidebar */}

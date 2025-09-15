@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
-import Script from "next/script";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
@@ -30,11 +29,18 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CaseEvaluationFormData, FormStatus } from "@/types/form";
 import { getAllCaseTypes } from "@/lib/utils";
 
+declare global {
+  interface Window {
+    trustedFormCertIdCallback?: (id: string) => void;
+    trustedFormCertUrlCallback?: (url: string) => void;
+  }
+}
+
 interface ExtendedFormData extends CaseEvaluationFormData {
   agreeToQualification: boolean;
   agreeToTermsAndContact: boolean;
   agreeToDisclaimer: boolean;
-  trustedFormCertUrl?: string;
+  trustedFormCertUrl?: string; // we'll keep this in state for debugging only
 }
 
 const CaseEvaluation = () => {
@@ -57,8 +63,39 @@ const CaseEvaluation = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState<FormStatus>({ type: "", message: "" });
   const formRef = useRef<HTMLFormElement | null>(null);
+  const tfUrlRef = useRef<string>(""); // holds URL from callback if available
 
   const caseTypes = getAllCaseTypes();
+
+  // Load TrustedForm AFTER the form is in the DOM, and register callbacks
+  useEffect(() => {
+    if (!formRef.current) return;
+
+    // (optional) capture the URL via official callback for extra reliability
+    window.trustedFormCertUrlCallback = (url: string) => {
+      tfUrlRef.current = url;
+      // store for your own visibility (do NOT bind it back to a hidden input)
+      setFormData((prev) => ({ ...prev, trustedFormCertUrl: url }));
+    };
+
+    // inject the SDK
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.async = true;
+
+    // default hidden field name is xxTrustedFormCertUrl; we can be explicit:
+    const field = "xxTrustedFormCertUrl";
+    script.src =
+      "https://api.trustedform.com/certify.js?provide_referrer=true&field=" +
+      encodeURIComponent(field);
+
+    document.body.appendChild(script);
+
+    return () => {
+      // don't remove the script on unmount — if this component unmounts/remounts quickly,
+      // leaving it is harmless and avoids races
+    };
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -89,11 +126,12 @@ const CaseEvaluation = () => {
       return;
     }
 
-    // Read TrustedForm cert URL from the hidden input that the SDK injects/populates
-    const tfInput = formRef.current?.querySelector(
+    // Prefer the input TrustedForm injected; fallback to callback value
+    const injected = formRef.current?.querySelector(
       'input[name="xxTrustedFormCertUrl"]'
     ) as HTMLInputElement | null;
-    const tfUrl = tfInput?.value || "";
+
+    const tfUrl = injected?.value || tfUrlRef.current || "";
 
     setIsSubmitting(true);
     setFormStatus({ type: "", message: "" });
@@ -101,7 +139,7 @@ const CaseEvaluation = () => {
     try {
       await axios.post("/api/contact", {
         ...formData,
-        trustedFormCertUrl: tfUrl,
+        trustedFormCertUrl: tfUrl, // server will claim/retain this
       });
 
       setFormStatus({
@@ -138,25 +176,6 @@ const CaseEvaluation = () => {
 
   return (
     <section id="case-evaluation" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
-      {/* Load TrustedForm SDK AFTER the page is interactive.
-          This snippet appends a hidden input named xxTrustedFormCertUrl
-          and records the page URL/referrer. */}
-      <Script id="trustedform-certify" strategy="afterInteractive">
-        {`
-          (function() {
-            var tf = document.createElement('script'); tf.type = 'text/javascript'; tf.async = true;
-            var loc = encodeURIComponent(window.location.href);
-            var ref = encodeURIComponent(document.referrer);
-            // NOTE: using field=xxTrustedFormCertUrl ensures the hidden input name.
-            tf.src = 'https://api.trustedform.com/certify.js?provide_referrer=true'
-                     + '&l=' + loc
-                     + '&r=' + ref
-                     + '&field=xxTrustedFormCertUrl';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
-          })();
-        `}
-      </Script>
-
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -191,8 +210,9 @@ const CaseEvaluation = () => {
 
             <CardContent className="p-8">
               <form ref={formRef} onSubmit={handleSubmit} data-tf-element="form">
-                {/* hidden input for TF cert (SDK will populate) */}
-                <input type="hidden" name="xxTrustedFormCertUrl" value={formData.trustedFormCertUrl || ""} readOnly />
+                {/* IMPORTANT: do NOT render your own controlled hidden input for xxTrustedFormCertUrl.
+                    The SDK will inject it for you as:
+                    <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="..."> */}
 
                 <div className="space-y-6">
                   {/* Contact Information */}
@@ -429,6 +449,7 @@ const CaseEvaluation = () => {
                   <div className="flex justify-center pt-6">
                     <Button
                       type="submit"
+                      name="submit" // helpful per TF tips
                       className="bg-gradient-to-r from-accent to-yellow-400 text-primary font-black px-8 py-6 text-lg w-full sm:w-auto"
                       disabled={isSubmitting}
                       data-tf-element-role="submit"

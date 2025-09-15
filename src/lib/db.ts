@@ -1,18 +1,13 @@
 // src/lib/db.ts
-import mongoose, { Connection } from 'mongoose';
+import mongoose, { Connection } from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI;
-const MONGODB_DB_NAME = process.env.MONGODB_DB_NAME || 'equity-legal';
+const MONGODB_DB_NAME = process.env.MONGODB_DB_NAME || "equity-legal";
 
 if (!MONGODB_URI) {
-  throw new Error('Please define the MONGODB_URI environment variable inside .env.local');
+  throw new Error("Please define the MONGODB_URI environment variable inside .env.local");
 }
 
-/**
- * Global is used here to maintain a cached connection across hot reloads
- * in development. This prevents connections growing exponentially
- * during API Route usage.
- */
 let cached = global as typeof global & {
   mongoose: {
     conn: Connection | null;
@@ -21,45 +16,25 @@ let cached = global as typeof global & {
 };
 
 if (!cached.mongoose) {
-  cached.mongoose = {
-    conn: null,
-    promise: null,
-  };
+  cached.mongoose = { conn: null, promise: null };
 }
 
 export async function connectToDatabase() {
-  if (cached.mongoose.conn) {
-    return { db: cached.mongoose.conn, mongoose };
-  }
+  if (cached.mongoose.conn) return { db: cached.mongoose.conn, mongoose };
 
   if (!cached.mongoose.promise) {
-    const opts = {
-      bufferCommands: false,
-    };
-
-    // Use new db connection
-    cached.mongoose.promise = mongoose
-      .connect(`${MONGODB_URI}/${MONGODB_DB_NAME}`, opts)
-      .then((mongoose) => {
-        return mongoose;
-      });
+    const opts = { bufferCommands: false } as any;
+    cached.mongoose.promise = mongoose.connect(`${MONGODB_URI}/${MONGODB_DB_NAME}`, opts).then((m) => m);
   }
-
   try {
-    const mongoose = await cached.mongoose.promise;
-    cached.mongoose.conn = mongoose.connection;
-    return { db: cached.mongoose.conn, mongoose };
+    const m = await cached.mongoose.promise;
+    cached.mongoose.conn = m.connection;
+    return { db: cached.mongoose.conn, mongoose: m };
   } catch (e) {
     cached.mongoose.promise = null;
     throw e;
   }
 }
-
-// Create schemas and models
-// Example Contact Form Schema
-// src/lib/db.ts
-
-// ...
 
 const ContactFormSchema = new mongoose.Schema(
   {
@@ -72,8 +47,14 @@ const ContactFormSchema = new mongoose.Schema(
     medicalCondition: { type: String },
     additionalInfo: { type: String },
 
-    // --- new fields for TrustedForm + metadata ---
-    trustedFormCertUrl: { type: String },   // TrustedForm certificate URL
+    // TrustedForm + metadata
+    trustedFormCertUrl: { type: String },
+    trustedFormClaimed: { type: Boolean },
+    trustedFormClaimStatus: { type: Number },
+    trustedFormClaimResponse: { type: mongoose.Schema.Types.Mixed },
+    trustedFormClaimError: { type: String },
+    claimedAt: { type: Date },
+
     ipAddress: { type: String },
     userAgent: { type: String },
     referer: { type: String },
@@ -82,21 +63,15 @@ const ContactFormSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// Only define the model if it hasn't been defined already
 export const ContactForm =
-  mongoose.models.ContactForm ||
-  mongoose.model("ContactForm", ContactFormSchema);
+  mongoose.models.ContactForm || mongoose.model("ContactForm", ContactFormSchema);
 
-
-// Example Visitor Schema (for tracking analytics)
 const VisitorSchema = new mongoose.Schema({
   ipAddress: { type: String },
   userAgent: { type: String },
   pageViewed: { type: String, required: true },
   referrer: { type: String },
-  timestamp: { type: Date, default: Date.now }
+  timestamp: { type: Date, default: Date.now },
 });
 
-export const Visitor = mongoose.models.Visitor || mongoose.model('Visitor', VisitorSchema);
-
-// You can export other models as needed
+export const Visitor = mongoose.models.Visitor || mongoose.model("Visitor", VisitorSchema);

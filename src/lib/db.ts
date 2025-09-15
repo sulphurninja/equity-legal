@@ -57,23 +57,36 @@ export async function connectToDatabase() {
 
 // Create schemas and models
 // Example Contact Form Schema
-const ContactFormSchema = new mongoose.Schema({
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
-  email: { type: String, required: true },
-  phone: { type: String, required: true },
-  caseType: { type: String, required: true },
-  exposurePeriod: { type: String },
-  medicalCondition: { type: String },
-  additionalInfo: { type: String },
-  ipAddress: { type: String },
-  userAgent: { type: String },
-  createdAt: { type: Date, default: Date.now }
-}, { timestamps: true });
+// src/lib/db.ts
+
+// ...
+
+const ContactFormSchema = new mongoose.Schema(
+  {
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
+    email: { type: String, required: true },
+    phone: { type: String, required: true },
+    caseType: { type: String, required: true },
+    exposurePeriod: { type: String },
+    medicalCondition: { type: String },
+    additionalInfo: { type: String },
+
+    // --- new fields for TrustedForm + metadata ---
+    trustedFormCertUrl: { type: String },   // TrustedForm certificate URL
+    ipAddress: { type: String },
+    userAgent: { type: String },
+    referer: { type: String },
+    submittedAt: { type: Date, default: Date.now },
+  },
+  { timestamps: true }
+);
 
 // Only define the model if it hasn't been defined already
-// This is important in Next.js development with fast refresh
-export const ContactForm = mongoose.models.ContactForm || mongoose.model('ContactForm', ContactFormSchema);
+export const ContactForm =
+  mongoose.models.ContactForm ||
+  mongoose.model("ContactForm", ContactFormSchema);
+
 
 // Example Visitor Schema (for tracking analytics)
 const VisitorSchema = new mongoose.Schema({

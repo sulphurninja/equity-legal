@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Script from "next/script";
 import { motion, AnimatePresence } from "framer-motion";
 import axios from "axios";
@@ -34,7 +34,7 @@ interface ExtendedFormData extends CaseEvaluationFormData {
   agreeToQualification: boolean;
   agreeToTermsAndContact: boolean;
   agreeToDisclaimer: boolean;
-  trustedFormCertUrl?: string; // <- capture from TrustedForm hidden input
+  trustedFormCertUrl?: string;
 }
 
 const CaseEvaluation = () => {
@@ -81,11 +81,7 @@ const CaseEvaluation = () => {
       return;
     }
 
-    if (
-      !formData.agreeToQualification ||
-      !formData.agreeToTermsAndContact ||
-      !formData.agreeToDisclaimer
-    ) {
+    if (!formData.agreeToQualification || !formData.agreeToTermsAndContact || !formData.agreeToDisclaimer) {
       setFormStatus({
         type: "error",
         message: "You must agree to all terms and conditions to proceed.",
@@ -93,7 +89,7 @@ const CaseEvaluation = () => {
       return;
     }
 
-    // Read TrustedForm cert URL from hidden input that the SDK injects/populates
+    // Read TrustedForm cert URL from the hidden input that the SDK injects/populates
     const tfInput = formRef.current?.querySelector(
       'input[name="xxTrustedFormCertUrl"]'
     ) as HTMLInputElement | null;
@@ -105,7 +101,7 @@ const CaseEvaluation = () => {
     try {
       await axios.post("/api/contact", {
         ...formData,
-        trustedFormCertUrl: tfUrl, // send to server
+        trustedFormCertUrl: tfUrl,
       });
 
       setFormStatus({
@@ -143,7 +139,7 @@ const CaseEvaluation = () => {
   return (
     <section id="case-evaluation" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
       {/* Load TrustedForm SDK AFTER the page is interactive.
-          This snippet appends a hidden input named `xxTrustedFormCertUrl`
+          This snippet appends a hidden input named xxTrustedFormCertUrl
           and records the page URL/referrer. */}
       <Script id="trustedform-certify" strategy="afterInteractive">
         {`
@@ -151,12 +147,11 @@ const CaseEvaluation = () => {
             var tf = document.createElement('script'); tf.type = 'text/javascript'; tf.async = true;
             var loc = encodeURIComponent(window.location.href);
             var ref = encodeURIComponent(document.referrer);
-            // NOTE: both `field=xxTrustedFormCertUrl` and `xxTrustedFormCertUrl` param ensure the field name.
+            // NOTE: using field=xxTrustedFormCertUrl ensures the hidden input name.
             tf.src = 'https://api.trustedform.com/certify.js?provide_referrer=true'
                      + '&l=' + loc
                      + '&r=' + ref
-                     + '&field=xxTrustedFormCertUrl'
-                     + '&xxTrustedFormCertUrl=xxTrustedFormCertUrl';
+                     + '&field=xxTrustedFormCertUrl';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
           })();
         `}
@@ -306,7 +301,6 @@ const CaseEvaluation = () => {
                         </Select>
                       </div>
 
-                      {/* Optional additional text area if needed */}
                       <div>
                         <Label htmlFor="additionalInfo" className="text-sm font-bold text-gray-700">
                           Additional Information
@@ -431,7 +425,7 @@ const CaseEvaluation = () => {
                     )}
                   </AnimatePresence>
 
-                  {/* Submit Button (with consent role tags for TF) */}
+                  {/* Submit Button */}
                   <div className="flex justify-center pt-6">
                     <Button
                       type="submit"

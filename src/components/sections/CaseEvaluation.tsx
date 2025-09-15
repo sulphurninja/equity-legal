@@ -26,7 +26,7 @@ interface ExtendedFormData extends CaseEvaluationFormData {
   agreeToQualification: boolean;
   agreeToTermsAndContact: boolean;
   agreeToDisclaimer: boolean;
-  trustedFormCertUrl?: string; // dev visibility only
+  trustedFormCertUrl?: string; // for dev visibility only
 }
 
 const CaseEvaluation = () => {
@@ -50,23 +50,21 @@ const CaseEvaluation = () => {
   const [formStatus, setFormStatus] = useState<FormStatus>({ type: "", message: "" });
 
   const formRef = useRef<HTMLFormElement | null>(null);
-  const tfUrlRef = useRef<string>(""); // populated by callback if available
-
+  const tfUrlRef = useRef<string>(""); // set via callback if available
   const caseTypes = getAllCaseTypes();
 
-  // Inject TrustedForm script INSIDE the form so it can insert the hidden input.
   useEffect(() => {
     const form = formRef.current;
     if (!form) return;
 
-    // Official callbacks (optional but helpful)
+    // Optional callbacks (fire AFTER the script inserts the cert URL into your form):
     window.trustedFormCertUrlCallback = (url: string) => {
       tfUrlRef.current = url;
       setFormData((prev) => ({ ...prev, trustedFormCertUrl: url }));
-      // console.debug("TrustedForm URL via callback:", url);
+      // console.debug("TrustedForm URL:", url);
     };
     window.trustedFormCertIdCallback = (id: string) => {
-      // console.debug("TrustedForm ID via callback:", id);
+      // console.debug("TrustedForm ID:", id);
     };
 
     const loc = encodeURIComponent(window.location.href);
@@ -76,21 +74,15 @@ const CaseEvaluation = () => {
     const script = document.createElement("script");
     script.type = "text/javascript";
     script.async = true;
-    script.src = `https://api.trustedform.com/certify.js?provide_referrer=true&l=${loc}&r=${ref}&field=${encodeURIComponent(
-      field
-    )}`;
+    script.src = `https://api.trustedform.com/certify.js?provide_referrer=true&l=${loc}&r=${ref}&field=${encodeURIComponent(field)}`;
 
-    // 🔑 THIS is the key fix:
+    // 🔑 Append INSIDE the form so TF injects the hidden input into THIS form.
     form.appendChild(script);
-
-    return () => {
-      // Leave the script in place; removing isn’t necessary.
-    };
   }, []);
 
-  // Wait briefly for TF to populate the hidden input / callback before submit
+  // Wait briefly for TF to populate hidden input / callback before you submit
   const waitForTrustedFormUrl = async (): Promise<string> => {
-    for (let i = 0; i < 30; i++) { // ~1.5s max
+    for (let i = 0; i < 30; i++) { // ~1.5s total
       const injected = formRef.current?.querySelector(
         'input[name="xxTrustedFormCertUrl"]'
       ) as HTMLInputElement | null;
@@ -124,11 +116,11 @@ const CaseEvaluation = () => {
     setFormStatus({ type: "", message: "" });
 
     try {
-      const tfUrl = await waitForTrustedFormUrl(); // will be "" if SDK was blocked/not ready
+      const tfUrl = await waitForTrustedFormUrl(); // may be "" if blocked
 
       await axios.post("/api/contact", {
         ...formData,
-        trustedFormCertUrl: tfUrl, // server will claim it if present
+        trustedFormCertUrl: tfUrl,
       });
 
       setFormStatus({
@@ -152,7 +144,10 @@ const CaseEvaluation = () => {
         trustedFormCertUrl: "",
       });
     } catch (err) {
-      setFormStatus({ type: "error", message: "An error occurred. Please try again later or call our office directly." });
+      setFormStatus({
+        type: "error",
+        message: "An error occurred. Please try again later or call our office directly.",
+      });
       console.error("Form submission error:", err);
     } finally {
       setIsSubmitting(false);
@@ -175,13 +170,13 @@ const CaseEvaluation = () => {
             <CardHeader className="bg-gradient-to-r from-primary/5 to-blue-50 text-center pb-8">
               <CardTitle className="text-2xl font-bold text-primary">Find Out If You Qualify for Compensation</CardTitle>
             </CardHeader>
-
             <CardContent className="p-8">
               <form ref={formRef} onSubmit={handleSubmit}>
-                {/* TF will inject: <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="..."> */}
-
+                {/* TF will inject:
+                   <input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/..." />
+                */}
                 <div className="space-y-6">
-                  {/* Contact Information */}
+                  {/* Contact Info */}
                   <div>
                     <h3 className="text-xl font-bold text-primary mb-6 text-center">Your Contact Information</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
@@ -194,7 +189,6 @@ const CaseEvaluation = () => {
                         <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} required />
                       </div>
                     </div>
-
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div>
                         <Label htmlFor="email" className="text-sm font-bold text-gray-700 flex items-center"><Mail className="w-4 h-4 mr-2 text-primary" />Email Address*</Label>
@@ -225,7 +219,6 @@ const CaseEvaluation = () => {
                           </SelectContent>
                         </Select>
                       </div>
-
                       <div>
                         <Label htmlFor="additionalInfo" className="text-sm font-bold text-gray-700">Additional Information</Label>
                         <Textarea id="additionalInfo" name="additionalInfo" value={formData.additionalInfo} onChange={handleInputChange} />
@@ -284,8 +277,9 @@ const CaseEvaluation = () => {
                     </Button>
                   </div>
 
-                  {/* (optional dev-only) */}
-                  {/* <pre className="text-xs mt-2">TF URL: {formData.trustedFormCertUrl || "(waiting...)"} </pre> */}
+                  {/* Dev-only debug:
+                  <pre className="text-xs mt-2">TF URL: {formData.trustedFormCertUrl || "(waiting...)"} </pre>
+                  */}
                 </div>
               </form>
             </CardContent>

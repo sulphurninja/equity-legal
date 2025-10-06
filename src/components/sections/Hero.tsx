@@ -13,7 +13,7 @@ const Hero = () => {
   const [currentStat, setCurrentStat] = useState(0);
   const controls = useAnimation();
 
- 
+
 
   useEffect(() => {
     controls.start({
@@ -36,8 +36,8 @@ const Hero = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: "easeOut" }
     }
@@ -68,7 +68,7 @@ const Hero = () => {
         {/* Multiple overlay layers for depth */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-blue-900/90 to-indigo-900/95" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-        
+
         {/* Animated geometric shapes */}
         <motion.div
           className="absolute top-20 left-10 w-32 h-32 bg-accent/20 rounded-full blur-xl"
@@ -106,8 +106,8 @@ const Hero = () => {
         >
           {/* Trust Badge */}
           <motion.div variants={itemVariants}>
-            <Badge 
-              variant="outline" 
+            <Badge
+              variant="outline"
               className="border-accent/50 bg-accent/10 text-accent px-6 py-2 mb-8 font-bold text-sm backdrop-blur-sm hover:bg-accent/20 transition-all duration-300"
             >
               <Shield className="w-4 h-4 mr-2" />
@@ -153,8 +153,8 @@ const Hero = () => {
             variants={itemVariants}
           >
             We connect victims with top attorneys who fight for maximum compensation
-           
-           
+
+
           </motion.p>
 
           {/* CTA Buttons */}
@@ -167,9 +167,9 @@ const Hero = () => {
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
             >
-              <Button 
-                asChild 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="bg-gradient-to-r from-accent via-yellow-400 to-accent hover:from-accent/90 hover:via-yellow-400/90 hover:to-accent/90 text-primary font-black px-8 py-6 text-lg shadow-2xl hover:shadow-accent/25 border-2 border-accent/30 group relative overflow-hidden"
               >
                 <Link href="#case-evaluation" className="flex items-center relative z-10">
@@ -203,15 +203,15 @@ const Hero = () => {
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
             >
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
                 className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm shadow-xl group"
               >
                 <a href="tel:9085336944" className="flex items-center">
                   <Phone className="mr-3 h-5 w-5 group-hover:animate-pulse" />
-                  Call (908) 533-6944
+                  Call (914) 300 2717
                 </a>
               </Button>
             </motion.div>
@@ -241,7 +241,7 @@ const Hero = () => {
                   >
                     <Icon className="w-6 h-6" />
                   </motion.div>
-                  <motion.p 
+                  <motion.p
                     className="text-2xl md:text-3xl font-black text-white mb-1"
                     animate={currentStat === index ? {
                       color: ['#ffffff', '#ffd700', '#ffffff'],
@@ -263,10 +263,10 @@ const Hero = () => {
             className="flex items-center justify-center space-x-8 text-gray-300"
             variants={itemVariants}
           >
-         
-           
 
-            <motion.div 
+
+
+            <motion.div
               className="hidden md:flex items-center space-x-2"
               whileHover={{ scale: 1.05 }}
             >

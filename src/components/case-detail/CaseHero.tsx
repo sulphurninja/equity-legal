@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-  ArrowLeft, 
-  Phone, 
-  ArrowRight, 
-  Share2, 
-  Clock, 
+import {
+  ArrowLeft,
+  Phone,
+  ArrowRight,
+  Share2,
+  Clock,
   Shield,
   DollarSign,
   Users,
@@ -64,7 +64,7 @@ const CaseHero = ({ caseData }: CaseHeroProps) => {
           className="object-cover scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-blue-900/90 to-indigo-900/85" />
-        
+
         {/* Animated Overlay Pattern */}
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12"
@@ -160,14 +160,14 @@ const CaseHero = ({ caseData }: CaseHeroProps) => {
                   <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5" />
                   ACTIVE LITIGATION
                 </Badge>
-                
+
                 {caseData.featured && (
                   <Badge className="bg-red-500/20 text-red-300 border-red-500/30 px-3 py-1 text-xs sm:text-sm font-bold backdrop-blur-sm animate-pulse">
                     <Zap className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5" />
                     URGENT DEADLINES
                   </Badge>
                 )}
-                
+
                 <Badge className="bg-accent/20 text-accent border-accent/30 px-3 py-1 text-xs sm:text-sm font-bold backdrop-blur-sm">
                   <Scale className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5" />
                   NO WIN, NO FEE
@@ -211,7 +211,7 @@ const CaseHero = ({ caseData }: CaseHeroProps) => {
                 </p>
 
                 {/* Urgency Notice */}
-              
+
 
                 {/* Main CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4 mb-6">
@@ -245,7 +245,7 @@ const CaseHero = ({ caseData }: CaseHeroProps) => {
                     >
                       <a href="tel:9085336944" className="flex text-black items-center justify-center">
                         <Phone size={20} className="mr-2 sm:mr-3 text-black" />
-                        <span className=" text-black sm:inline">Call (908) 533-6944</span>
+                        <span className=" text-black sm:inline">Call (914) 300 2717</span>
                         <span className="sm:hidden ">Call Now</span>
                       </a>
                     </Button>
@@ -253,12 +253,12 @@ const CaseHero = ({ caseData }: CaseHeroProps) => {
                 </div>
 
                 {/* Trust Indicators */}
-             
+
               </motion.div>
             </div>
 
             {/* Stats Sidebar */}
-         
+
           </div>
 
           {/* Share Button - Mobile Friendly */}

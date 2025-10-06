@@ -85,8 +85,8 @@ const Footer = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5
@@ -104,7 +104,7 @@ const Footer = () => {
           animate={{ x: [-100, 200] }}
           transition={{ duration: 8, repeat: Infinity, repeatType: "reverse" }}
         />
-        
+
         {/* Geometric Patterns */}
         <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full border-[40px] border-white/5" />
         <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full border-[40px] border-white/5" />
@@ -146,7 +146,7 @@ const Footer = () => {
             <Zap className="w-4 h-4 mr-2" />
             FREE CASE REVIEW
           </Badge>
-          
+
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4 sm:mb-6 leading-tight">
             <span className="bg-gradient-to-r from-accent to-yellow-400 bg-clip-text text-transparent">
               Get the Compensation
@@ -154,9 +154,9 @@ const Footer = () => {
             <br />
             <span className="text-white">You Deserve Today</span>
           </h2>
-          
+
           <p className="text-lg sm:text-xl text-white/80 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed">
-            Don't wait. Many cases have strict deadlines. 
+            Don't wait. Many cases have strict deadlines.
             <span className="font-bold text-accent"> Call now for your free consultation.</span>
           </p>
 
@@ -168,7 +168,7 @@ const Footer = () => {
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-xl hover:shadow-2xl w-full sm:w-auto">
                 <a href="tel:9085336944" className="flex items-center justify-center">
                   <Phone className="mr-3 h-5 w-5" />
-                  Call (908) 533-6944
+                  Call (914) 300 2717
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
@@ -194,7 +194,7 @@ const Footer = () => {
           </div>
 
           {/* Trust Stats */}
-       
+
         </motion.div>
 
         {/* Main Footer Content */}
@@ -217,7 +217,7 @@ const Footer = () => {
               </div>
               <span className="text-xl sm:text-2xl font-black text-white mb-4 block">Lex Claim Connect</span>
               <p className="mb-6 text-white/80 leading-relaxed text-sm sm:text-base">
-                We're dedicated to helping victims of negligence receive the compensation they deserve. Our experienced legal team handles mass tort and class action cases nationwide with a 
+                We're dedicated to helping victims of negligence receive the compensation they deserve. Our experienced legal team handles mass tort and class action cases nationwide with a
                 <span className="font-bold text-accent"> 98% success rate.</span>
               </p>
 
@@ -240,7 +240,7 @@ const Footer = () => {
                     <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-2 text-purple-400" />
                     <span>Expert Team</span>
                   </div>
-                 
+
                 </div>
               </div>
             </motion.div>
@@ -254,7 +254,7 @@ const Footer = () => {
                 Get In Touch
               </h3>
               <div className="space-y-6">
-                <motion.div 
+                <motion.div
                   className="group cursor-pointer"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
@@ -266,14 +266,14 @@ const Footer = () => {
                     <div>
                       <p className="font-bold text-white mb-1 text-sm sm:text-base">Call Us Now</p>
                       <p className="text-accent font-black text-lg sm:text-xl hover:text-accent/80 transition-colors">
-                        (908) 533-6944
+                        (914) 300 2717
                       </p>
                       <p className="text-white/60 text-xs sm:text-sm">Available 24/7 for emergencies</p>
                     </div>
                   </a>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                   className="group cursor-pointer"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
@@ -310,7 +310,7 @@ const Footer = () => {
               <h3 className="text-lg sm:text-xl font-black mb-6 text-white">Active Cases</h3>
               <ul className="space-y-3">
                 {caseLinks.map((link, index) => (
-                  <motion.li 
+                  <motion.li
                     key={index}
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.2 }}
@@ -347,7 +347,7 @@ const Footer = () => {
               <h3 className="text-lg sm:text-xl font-black mb-6 text-white">Quick Links</h3>
               <ul className="space-y-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
                 {quickLinks.map((link, index) => (
-                  <motion.li 
+                  <motion.li
                     key={index}
                     whileHover={{ x: 5 }}
                     transition={{ duration: 0.2 }}
@@ -361,7 +361,7 @@ const Footer = () => {
                     </Link>
                   </motion.li>
                 ))}
-                
+
                 <li className="sm:col-span-2 lg:col-span-1 mt-4 pt-4 border-t border-white/10">
                   <motion.div
                     whileHover={{ scale: 1.02, y: -2 }}
@@ -396,7 +396,7 @@ const Footer = () => {
         >
           <div className="flex flex-col sm:flex-row items-center justify-between mb-6">
             <p className="mb-4 sm:mb-0">© {currentYear} Lex Claim Connect. All Rights Reserved.</p>
-           
+
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-6">

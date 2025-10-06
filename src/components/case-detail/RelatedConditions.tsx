@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  AlertCircle, 
-  Heart, 
-  Brain, 
-  Activity, 
-  Shield, 
-  Phone, 
-  CheckCircle, 
+import {
+  AlertCircle,
+  Heart,
+  Brain,
+  Activity,
+  Shield,
+  Phone,
+  CheckCircle,
   ArrowRight,
   Stethoscope,
   FileText,
@@ -30,21 +30,21 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
   // Categorize conditions by severity/type for better organization
   const categorizeConditions = (conditions: string[]) => {
     // This is a simplified categorization - in a real app, this would be more sophisticated
-    const severe = conditions.filter(condition => 
-      condition.toLowerCase().includes('cancer') || 
+    const severe = conditions.filter(condition =>
+      condition.toLowerCase().includes('cancer') ||
       condition.toLowerCase().includes('death') ||
       condition.toLowerCase().includes('failure')
     );
-    
-    const moderate = conditions.filter(condition => 
+
+    const moderate = conditions.filter(condition =>
       !severe.includes(condition) && (
         condition.toLowerCase().includes('disease') ||
         condition.toLowerCase().includes('disorder') ||
         condition.toLowerCase().includes('syndrome')
       )
     );
-    
-    const mild = conditions.filter(condition => 
+
+    const mild = conditions.filter(condition =>
       !severe.includes(condition) && !moderate.includes(condition)
     );
 
@@ -66,8 +66,8 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5
@@ -77,8 +77,8 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
 
   const conditionVariants = {
     hidden: { opacity: 0, scale: 0.9 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       scale: 1,
       transition: {
         duration: 0.3
@@ -104,11 +104,11 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
 
   const getSeverityBadge = (severity: 'severe' | 'moderate' | 'mild') => {
     switch (severity) {
-      case 'severe': 
+      case 'severe':
         return <Badge className="bg-red-500/20 text-red-700 border-red-500/30 text-xs">HIGH PRIORITY</Badge>;
-      case 'moderate': 
+      case 'moderate':
         return <Badge className="bg-orange-500/20 text-orange-700 border-orange-500/30 text-xs">MODERATE</Badge>;
-      case 'mild': 
+      case 'mild':
         return <Badge className="bg-blue-500/20 text-blue-700 border-blue-500/30 text-xs">MILD</Badge>;
     }
   };
@@ -201,8 +201,8 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
                       Critical Health Information
                     </h3>
                     <p className="text-red-600 mb-4 leading-relaxed text-sm sm:text-base">
-                      These medical conditions have been scientifically linked to {caseData.title.toLowerCase()}. 
-                      Even if your diagnosis came years after exposure, you may still be eligible for compensation. 
+                      These medical conditions have been scientifically linked to {caseData.title.toLowerCase()}.
+                      Even if your diagnosis came years after exposure, you may still be eligible for compensation.
                       <span className="font-bold"> Don't wait - legal deadlines apply.</span>
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3">
@@ -215,7 +215,7 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
                       <Button asChild variant="outline" size="sm" className="border-2 border-red-300 text-red-700 hover:bg-red-50">
                         <a href="tel:9085336944">
                           <Phone className="w-4 h-4 mr-2" />
-                          Call (908) 533-6944
+                          Call (914) 300 2717
                         </a>
                       </Button>
                     </div>
@@ -234,7 +234,7 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
                   <div className="bg-red-500/20 rounded-full p-3 mr-4">
                     <AlertCircle className="w-6 h-6 text-red-600" />
                   </div>
-                  
+
                   <div>
                     <h3 className="text-2xl font-black text-red-700">
                       Severe Conditions
@@ -242,11 +242,11 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
                     <p className="text-red-600 text-sm">
                       Life-threatening conditions with highest compensation potential
                     </p>
-                  {getSeverityBadge('severe')}
-                    
+                    {getSeverityBadge('severe')}
+
                   </div>
                 </div>
-                
+
                 <motion.div
                   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
                   variants={containerVariants}
@@ -294,11 +294,11 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
                     <p className="text-orange-600 text-sm">
                       Chronic conditions affecting quality of life
                     </p>
-                  {getSeverityBadge('moderate')}
+                    {getSeverityBadge('moderate')}
 
                   </div>
                 </div>
-                
+
                 <motion.div
                   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
                   variants={containerVariants}
@@ -346,11 +346,11 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
                     <p className="text-blue-600 text-sm">
                       Additional symptoms and conditions
                     </p>
-                  {getSeverityBadge('mild')}
+                    {getSeverityBadge('mild')}
 
                   </div>
                 </div>
-                
+
                 <motion.div
                   className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4"
                   variants={containerVariants}
@@ -387,7 +387,7 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
                 <div className="bg-accent/20 rounded-full p-4 inline-flex items-center justify-center mb-6">
                   <FileText className="w-8 h-8 text-accent" />
                 </div>
-                
+
                 <h3 className="text-2xl sm:text-3xl font-black mb-4">
                   <span className="bg-gradient-to-r from-accent to-yellow-400 bg-clip-text text-transparent">
                     Diagnosed with Any
@@ -395,7 +395,7 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
                   <br />
                   <span className="text-white">of These Conditions?</span>
                 </h3>
-                
+
                 <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
                   You may be entitled to significant compensation. Our medical experts will review your diagnosis and determine your eligibility.
                   <span className="font-bold text-accent"> Get your free case evaluation now.</span>
@@ -414,7 +414,7 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
                       </Link>
                     </Button>
                   </motion.div>
-                  
+
                   <motion.div
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.98 }}
@@ -422,7 +422,7 @@ const RelatedConditions = ({ caseData }: RelatedConditionsProps) => {
                     <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm w-full sm:w-auto">
                       <a href="tel:9085336944">
                         <Phone className="mr-3 h-5 w-5" />
-                        Call (908) 533-6944
+                        Call (914) 300 2717
                       </a>
                     </Button>
                   </motion.div>

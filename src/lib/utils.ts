@@ -543,7 +543,7 @@ export const getAllCaseTypes = (): CaseType[] => {
         }
       ]
     },
- {
+    {
       id: "21",
       slug: "lds-sex-abuse",
       title: "LDS Church Sex Abuse",
@@ -580,9 +580,215 @@ export const getAllCaseTypes = (): CaseType[] => {
           answer: "Many LDS abuse cases resolve through confidential settlements before reaching a public trial. Your attorney can file court documents using your initials rather than your full name to protect your privacy. While the legal process may require you to share your experience with certain individuals like your legal team and potentially in depositions, this is different from making your story public. Your attorney will work to protect your privacy throughout the process."
         }
       ]
+    },
+    {
+      id: "22",
+      slug: "depo-provera",
+      title: "Depo Provera Brain Tumor",
+      shortDescription: "Women who used Depo Provera birth control shots and developed brain tumors may be eligible for compensation.",
+      fullDescription: "Depo Provera is a long-acting birth control injection that contains medroxyprogesterone acetate, a synthetic hormone. Recent studies have suggested a potential link between prolonged use of Depo Provera and an increased risk of developing meningiomas, which are typically benign brain tumors that develop in the protective membranes surrounding the brain and spinal cord. A 2024 study published in the BMJ found that women who used Depo Provera for more than a year had a significantly increased risk of developing these brain tumors. Lawsuits allege that Pfizer, the manufacturer of Depo Provera, failed to adequately warn patients and healthcare providers about this serious potential side effect, despite evidence suggesting the connection between synthetic progestins and brain tumor development.",
+      imageUrl: "/images/cases/depo.webp",
+      compensationInfo: "Depo Provera brain tumor lawsuits are in the early stages of litigation. Compensation may include medical expenses for tumor treatment and surgery, ongoing medical monitoring, lost wages, pain and suffering, and diminished quality of life. Settlement amounts will likely vary based on factors such as tumor size and location, treatment required, and long-term effects on cognitive function and daily activities.",
+      eligibilityCriteria: [
+        "Used Depo Provera birth control injections for an extended period (typically one year or more)",
+        "Diagnosed with meningioma or other brain tumor",
+        "Clear medical documentation of both Depo Provera use and brain tumor diagnosis",
+        "No other significant risk factors for brain tumor development"
+      ],
+      relatedConditions: [
+        "Meningioma",
+        "Intracranial Meningioma",
+        "Spinal Meningioma",
+        "Headaches and Migraines",
+        "Vision Problems",
+        "Seizures",
+        "Cognitive Impairment",
+        "Balance and Coordination Issues"
+      ],
+      faqs: [
+        {
+          question: "How long do you need to use Depo Provera to be at risk for brain tumors?",
+          answer: "Research suggests that the risk appears to increase with longer duration of use, particularly after one year of continuous use. The 2024 BMJ study found the highest risk among women who used Depo Provera for more than one year, with risk increasing further with longer periods of use."
+        },
+        {
+          question: "Are meningiomas always cancerous?",
+          answer: "Most meningiomas are benign (non-cancerous), but they can still cause serious problems due to their location in the brain. Even benign brain tumors can cause headaches, seizures, vision problems, and other neurological symptoms. Some meningiomas may require surgical removal, radiation treatment, or ongoing monitoring, and can significantly impact quality of life."
+        },
+        {
+          question: "Is Depo Provera still available?",
+          answer: "Yes, Depo Provera is still available and widely used as a birth control method. However, the recent research findings have led to increased scrutiny and calls for better warning labels. Women currently using or considering Depo Provera should discuss the potential risks and benefits with their healthcare providers."
+        }
+      ]
+    },
+    {
+      id: "23",
+      slug: "roblox-addiction",
+      title: "Roblox Gaming Addiction",
+      shortDescription: "Children who developed gaming addiction and related mental health issues from Roblox may be eligible for compensation.",
+      fullDescription: "Roblox is an online gaming platform popular among children and teenagers that allows users to create and play games created by other users. Lawsuits allege that Roblox Corporation deliberately designed their platform to be addictive, using psychological manipulation techniques similar to gambling mechanisms to keep young users engaged for excessive amounts of time. These techniques allegedly include variable reward schedules, social pressure mechanics, fear of missing out (FOMO) triggers, and in-game purchases that create compulsive spending behaviors. Parents and mental health experts have raised concerns about children spending 8-12 hours daily on the platform, neglecting sleep, school, social relationships, and physical health. Lawsuits claim that Roblox knew or should have known that their design choices could lead to addictive behaviors in children but prioritized profits over child welfare.",
+      imageUrl: "/images/cases/roblox.png",
+      compensationInfo: "Roblox addiction lawsuits are still in early stages of litigation. Potential compensation may include costs for mental health treatment, therapy expenses, educational support for academic difficulties, medical expenses for related health issues, and damages for emotional distress. The amount would likely depend on the severity of addiction, impact on the child's development and family relationships, and treatment requirements.",
+      eligibilityCriteria: [
+        "Child was a regular Roblox user who developed compulsive gaming behaviors",
+        "Excessive gaming time (typically 4+ hours daily) that interfered with normal activities",
+        "Documented mental health, academic, or behavioral problems related to gaming",
+        "Professional diagnosis or treatment for gaming addiction or related conditions"
+      ],
+      relatedConditions: [
+        "Gaming Disorder/Internet Gaming Addiction",
+        "Depression and Anxiety",
+        "Sleep Disorders and Insomnia",
+        "Academic Performance Decline",
+        "Social Isolation",
+        "Attention Deficit Issues",
+        "Aggressive Behavior",
+        "Physical Health Problems (eye strain, poor posture, lack of exercise)"
+      ],
+      faqs: [
+        {
+          question: "How is Roblox different from other video games in terms of addiction potential?",
+          answer: "Lawsuits allege that Roblox uses particularly manipulative design elements targeting children, including social features that create peer pressure, unpredictable reward systems similar to gambling, constant notifications and events that create fear of missing out, and a virtual economy that encourages real money spending. Unlike traditional games with clear endpoints, Roblox is designed to keep users engaged indefinitely."
+        },
+        {
+          question: "What evidence is needed for a Roblox addiction lawsuit?",
+          answer: "Helpful evidence includes documentation of excessive gaming time (screen time reports, gaming logs), medical or therapy records related to behavioral changes, school records showing academic decline, communications with Roblox customer service about account issues, records of in-game purchases, and testimony from family members about behavioral changes. Professional evaluation by a mental health expert familiar with gaming addiction can also be important."
+        },
+        {
+          question: "Are there age requirements for these lawsuits?",
+          answer: "These lawsuits typically focus on minors (under 18) who developed addictive behaviors while using Roblox, as children are considered more vulnerable to manipulative design tactics. The specific age range and other eligibility criteria may vary as the litigation develops. Parents or guardians would typically file these claims on behalf of affected children."
+        }
+      ]
+    },
+    {
+      id: "24",
+      slug: "motor-vehicle-accident",
+      title: "Motor Vehicle Accident",
+      shortDescription: "Victims of car accidents, truck collisions, motorcycle crashes, and other motor vehicle incidents may be entitled to compensation.",
+      fullDescription: "Motor vehicle accidents are one of the leading causes of personal injury in the United States, resulting in millions of injuries and thousands of deaths each year. These accidents can involve cars, trucks, motorcycles, buses, and other vehicles, and can be caused by various factors including distracted driving, drunk driving, speeding, reckless driving, poor weather conditions, mechanical failures, or defective auto parts. Victims of motor vehicle accidents may suffer from a wide range of injuries, from minor cuts and bruises to severe traumatic brain injuries, spinal cord damage, broken bones, and internal injuries. In many cases, these accidents result from another party's negligence, entitling victims to compensation for their medical expenses, lost wages, pain and suffering, and other damages.",
+      imageUrl: "/images/cases/mva.jpg",
+      compensationInfo: "Compensation in motor vehicle accident cases varies widely based on factors such as the severity of injuries, medical expenses, lost income, property damage, degree of fault, and long-term impact on quality of life. Settlements can range from thousands of dollars for minor injuries to millions for catastrophic injuries or wrongful death. Insurance policy limits and available assets of at-fault parties also affect potential compensation.",
+      eligibilityCriteria: [
+        "Injured in a motor vehicle accident caused by another party's negligence",
+        "Documented injuries requiring medical treatment",
+        "Clear evidence of fault or liability on the part of another driver or entity",
+        "Accident occurred within the statute of limitations period (varies by state)"
+      ],
+      relatedConditions: [
+        "Traumatic Brain Injury (TBI)",
+        "Spinal Cord Injuries",
+        "Broken Bones and Fractures",
+        "Whiplash and Neck Injuries",
+        "Back Injuries",
+        "Internal Injuries",
+        "Burns",
+        "Post-Traumatic Stress Disorder (PTSD)",
+        "Permanent Disability",
+        "Scarring and Disfigurement"
+      ],
+      faqs: [
+        {
+          question: "What should I do immediately after a motor vehicle accident?",
+          answer: "First, seek medical attention for any injuries, even if they seem minor. Call the police to file an accident report, exchange insurance information with other drivers, take photos of the accident scene and vehicle damage, collect contact information from witnesses, and avoid admitting fault. Contact an experienced personal injury attorney as soon as possible to protect your rights."
+        },
+        {
+          question: "How long do I have to file a motor vehicle accident claim?",
+          answer: "The statute of limitations for motor vehicle accident claims varies by state, typically ranging from 1-6 years from the date of the accident. However, it's important to contact an attorney and begin the claims process as soon as possible, as evidence can be lost and witness memories can fade over time. Some claims against government entities have much shorter deadlines."
+        },
+        {
+          question: "What if the other driver doesn't have insurance?",
+          answer: "If the at-fault driver is uninsured, you may still have options for compensation through your own uninsured motorist coverage, underinsured motorist coverage, or by pursuing a personal lawsuit against the at-fault driver. Your attorney can help evaluate all available sources of compensation and determine the best strategy for your specific situation."
+        }
+      ]
+    },
+    {
+      id: "25",
+      slug: "slip-and-fall",
+      title: "Slip and Fall Accident",
+      shortDescription: "People injured in slip and fall accidents on someone else's property may be eligible for compensation due to negligent property maintenance.",
+      fullDescription: "Slip and fall accidents, also known as premises liability cases, occur when someone is injured due to dangerous or hazardous conditions on another person's or entity's property. These accidents can happen in various locations including grocery stores, restaurants, shopping malls, office buildings, hotels, private residences, parking lots, and sidewalks. Common causes include wet or slippery floors, uneven surfaces, poor lighting, broken stairs, debris or obstacles in walkways, icy conditions, torn carpeting, and inadequate warning signs. Property owners and managers have a legal duty to maintain their premises in a reasonably safe condition and to warn visitors of known hazards. When they fail to meet this duty and someone is injured as a result, they may be held liable for damages.",
+      imageUrl: "/images/cases/slipnfall.avif",
+      compensationInfo: "Compensation in slip and fall cases depends on the severity of injuries, medical expenses, lost wages, degree of property owner negligence, and the injured person's degree of fault (if any). Settlements can range from thousands of dollars for minor injuries to hundreds of thousands or more for severe injuries requiring surgery, long-term care, or resulting in permanent disability. Factors like ongoing medical treatment needs and impact on earning capacity also affect compensation amounts.",
+      eligibilityCriteria: [
+        "Injured in a slip, trip, or fall accident on someone else's property",
+        "Accident caused by a dangerous or hazardous condition on the property",
+        "Property owner knew or should have known about the dangerous condition",
+        "Documented injuries requiring medical treatment",
+        "Accident reported and documented (when possible)"
+      ],
+      relatedConditions: [
+        "Broken Bones and Fractures",
+        "Hip Fractures",
+        "Wrist and Arm Injuries",
+        "Traumatic Brain Injury",
+        "Spinal Injuries",
+        "Knee and Ankle Injuries",
+        "Soft Tissue Injuries",
+        "Bruises and Lacerations",
+        "Chronic Pain",
+        "Limited Mobility"
+      ],
+      faqs: [
+        {
+          question: "What makes a property owner liable for my slip and fall injury?",
+          answer: "Property owners can be held liable if they knew or should have reasonably known about a dangerous condition and failed to fix it or warn visitors about it. This could include things like failing to clean up spills promptly, not maintaining proper lighting, ignoring broken stairs, or not placing warning signs around hazardous areas. The key is proving that the property owner was negligent in maintaining safe conditions."
+        },
+        {
+          question: "What should I do immediately after a slip and fall accident?",
+          answer: "Seek medical attention right away, even for seemingly minor injuries. Report the accident to the property owner or manager and ask for an incident report to be filed. Take photos of the accident scene, the hazardous condition, and your injuries if possible. Collect contact information from witnesses. Keep records of all medical treatment and expenses. Avoid giving detailed statements to insurance companies before consulting with an attorney."
+        },
+        {
+          question: "Can I still recover compensation if I was partially at fault for my accident?",
+          answer: "In many states, you may still be able to recover compensation even if you were partially at fault, though your compensation may be reduced by your percentage of fault. This is called comparative negligence. For example, if you were found to be 20% at fault and your damages were $100,000, you might recover $80,000. The specific rules vary by state, so it's important to consult with a local attorney."
+        }
+      ]
+    },
+    {
+      id: "26",
+      slug: "dog-bite",
+      title: "Dog Bite Injury",
+      shortDescription: "Victims of dog attacks and bites may be entitled to compensation from the dog owner for medical expenses, scarring, and trauma.",
+      fullDescription: "Dog bite incidents affect millions of Americans each year, with children being particularly vulnerable to serious injuries. Dog attacks can result in severe physical injuries including deep lacerations, puncture wounds, nerve damage, infections, scarring, and in some cases, permanent disfigurement. Beyond physical injuries, dog bite victims often experience psychological trauma, including fear of dogs, anxiety, and post-traumatic stress disorder. Most states have specific laws regarding dog owner liability, with many following either strict liability rules (where the owner is responsible regardless of the dog's history) or the 'one bite rule' (where owners are liable if they knew or should have known their dog was dangerous). Dog owners may be held responsible not only for direct attacks but also for injuries that occur when people fall or are knocked down while trying to avoid an aggressive dog.",
+      imageUrl: "/images/cases/dog-bite.webp",
+      compensationInfo: "Compensation in dog bite cases typically covers medical expenses, plastic surgery and scar revision costs, lost wages, pain and suffering, and psychological counseling. For children, compensation may also include future medical needs and emotional trauma. Settlement amounts vary widely, from thousands for minor bites to hundreds of thousands or more for severe injuries involving extensive scarring, nerve damage, or psychological trauma. Homeowner's or renter's insurance often covers these claims.",
+      eligibilityCriteria: [
+        "Bitten or attacked by someone else's dog",
+        "Documented injuries requiring medical treatment",
+        "Clear identification of the dog and its owner",
+        "Incident occurred in a location where you had a legal right to be",
+        "Reported to appropriate authorities (animal control, police) when possible"
+      ],
+      relatedConditions: [
+        "Deep Lacerations and Puncture Wounds",
+        "Scarring and Disfigurement",
+        "Nerve Damage",
+        "Infections (including risk of rabies)",
+        "Broken Bones",
+        "Muscle and Tendon Damage",
+        "Post-Traumatic Stress Disorder (PTSD)",
+        "Anxiety and Fear of Dogs",
+        "Need for Plastic Surgery",
+        "Permanent Disability"
+      ],
+      faqs: [
+        {
+          question: "What should I do immediately after a dog bite?",
+          answer: "Seek immediate medical attention, as dog bites can cause serious infections even if they appear minor. Clean the wound thoroughly if possible. Identify the dog and owner, and get their contact and insurance information. Take photos of your injuries and the location where the bite occurred. Report the incident to local animal control authorities and police. Get contact information from any witnesses. Keep detailed records of all medical treatment and expenses."
+        },
+        {
+          question: "Am I entitled to compensation even if I was on the dog owner's property?",
+          answer: "In many cases, yes. Most states hold dog owners liable for bites that occur on their property if the victim was lawfully present (such as a mail carrier, delivery person, or invited guest). However, compensation may be limited if you were trespassing or provoking the dog. The specific laws vary by state, with some states having strict liability and others requiring proof that the owner knew the dog was dangerous."
+        },
+        {
+          question: "What if the dog has no history of aggression?",
+          answer: "In states with strict liability dog bite laws, the owner can be held responsible even if the dog has never bitten anyone before and showed no previous signs of aggression. These laws recognize that any dog can bite and that owners should be responsible for their pets' actions. However, some states still follow the 'one bite rule,' where owners are only liable if they knew or should have known their dog was dangerous."
+        }
+      ]
     }
+
   ];
 };
+
+
 
 export const getCaseBySlug = async (slug: string): Promise<CaseType | undefined> => {
   const allCases = getAllCaseTypes();

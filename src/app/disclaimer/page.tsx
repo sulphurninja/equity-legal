@@ -12,7 +12,7 @@ const DisclaimerPage = () => {
       <h1 className="text-4xl font-bold mb-8">Legal Disclaimer</h1>
 
       <div className="prose prose-lg max-w-none">
-        <p className="text-lg mb-6">Last Updated: {new Date().toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric'})}</p>
+        <p className="text-lg mb-6">Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">1. Attorney Advertising</h2>
         <p>This website is attorney advertising. The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice for any individual case or situation. This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship.</p>
@@ -48,7 +48,7 @@ const DisclaimerPage = () => {
         <h2 className="text-2xl font-semibold mt-8 mb-4">10. Contact Information</h2>
         <p>If you have any questions about this disclaimer, please contact us at:</p>
         <p>Email: support@lexclaimconnect.com</p>
-        <p>Phone: (908) 533-6944</p>
+        <p>Phone: (914) 300 2717</p>
         {/* <p>Address: 613, Ridge Road, 201 Monmouth Junction, NJ, 08852</p> */}
       </div>
     </div>

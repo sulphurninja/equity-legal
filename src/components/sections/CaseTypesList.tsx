@@ -36,9 +36,9 @@ const CaseTypesList = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      y: 0,
       scale: 1,
       transition: {
         duration: 0.5,
@@ -80,8 +80,8 @@ const CaseTypesList = () => {
   };
 
   const CaseCard = ({ caseType, index }: { caseType: CaseType; index: number }) => (
-    <motion.div 
-      key={caseType.id} 
+    <motion.div
+      key={caseType.id}
       variants={itemVariants}
       className="h-full"
     >
@@ -95,13 +95,13 @@ const CaseTypesList = () => {
               fill
               className="object-cover transform transition-transform duration-500 group-hover:scale-105"
             />
-            
+
             {/* Static Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            
+
             {/* Hover Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            
+
             {/* Active Badge */}
             <div className="absolute top-4 right-4">
               <Badge className="bg-accent/90 text-primary font-bold shadow-lg backdrop-blur-sm">
@@ -131,7 +131,7 @@ const CaseTypesList = () => {
             <CardDescription className="text-gray-600 line-clamp-3 leading-relaxed">
               {caseType.shortDescription}
             </CardDescription>
-            
+
             {/* Key Features */}
             <div className="flex items-center mt-4 space-x-4 text-sm text-gray-500">
               <div className="flex items-center">
@@ -148,10 +148,10 @@ const CaseTypesList = () => {
           <CardFooter className="pt-0 pb-6">
             <div className="flex items-center justify-between w-full">
               <div className="flex items-center text-primary text-sm font-bold group-hover:text-accent transition-colors">
-                Learn More 
+                Learn More
                 <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-200" />
               </div>
-             
+
             </div>
           </CardFooter>
         </Card>
@@ -198,7 +198,7 @@ const CaseTypesList = () => {
 
           {/* Trust Indicators */}
           <div className="flex items-center justify-center space-x-8 mt-8">
-           
+
             <div className="flex items-center text-gray-600">
               <Shield className="w-5 h-5 text-blue-500 mr-2" />
               <span className="font-medium">No Fees</span>
@@ -219,9 +219,9 @@ const CaseTypesList = () => {
                 {Object.entries(caseCategories).map(([key, category]) => {
                   const Icon = category.icon;
                   return (
-                    <TabsTrigger 
+                    <TabsTrigger
                       key={key}
-                      value={key} 
+                      value={key}
                       className="flex items-center space-x-2 px-6 py-4 rounded-xl font-bold transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-primary data-[state=active]:to-blue-600 data-[state=active]:text-white data-[state=active]:shadow-lg"
                     >
                       <Icon className="w-4 h-4" />
@@ -297,7 +297,7 @@ const CaseTypesList = () => {
             <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
               Many cases have strict deadlines. Get your free consultation today and learn about your legal options.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black px-8 py-6 text-lg shadow-xl hover:shadow-2xl border-2 border-accent/30 transition-all duration-300 hover:scale-105">
                 <Link href="/cases" className="flex items-center">
@@ -305,11 +305,11 @@ const CaseTypesList = () => {
                   <ExternalLink size={20} className="ml-3 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              
+
               <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm transition-all duration-300">
                 <a href="tel:9085336944" className="flex items-center">
                   <Shield className="mr-3 h-5 w-5" />
-                  Call (908) 533-6944
+                  Call (914) 300 2717
                 </a>
               </Button>
             </div>
@@ -324,7 +324,7 @@ const CaseTypesList = () => {
                 <div className="font-bold text-xl text-accent">$0</div>
                 <div className="text-sm opacity-80">Upfront Fees</div>
               </div>
-             
+
             </div>
           </div>
         </motion.div>

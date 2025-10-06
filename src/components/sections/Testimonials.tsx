@@ -96,8 +96,8 @@ const Testimonials = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5
@@ -191,7 +191,7 @@ const Testimonials = () => {
           </motion.div>
 
           {/* Success Statistics */}
-       
+
           {/* Main Testimonial Carousel */}
           <motion.div variants={itemVariants} className="relative max-w-5xl mx-auto">
             <div className="relative overflow-hidden rounded-3xl">
@@ -278,11 +278,10 @@ const Testimonials = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 ${
-                    index === currentIndex
+                  className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 ${index === currentIndex
                       ? "bg-primary scale-125"
                       : "bg-gray-300 hover:bg-gray-400"
-                  }`}
+                    }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
@@ -354,7 +353,7 @@ const Testimonials = () => {
                   <br />
                   <span className="text-white">Next Success Story?</span>
                 </h3>
-                
+
                 <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto">
                   Join thousands of satisfied clients who received the justice they deserved.
                   <span className="font-bold text-accent"> Your free consultation is just one click away.</span>
@@ -371,13 +370,13 @@ const Testimonials = () => {
                       </Link>
                     </Button>
                   </motion.div>
-                  
+
                   <motion.div
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm w-full sm:w-auto">
-                      <a href="tel:9085336944">Call (908) 533-6944</a>
+                      <a href="tel:9085336944">Call (914) 300 2717</a>
                     </Button>
                   </motion.div>
                 </div>

@@ -7,14 +7,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { 
-  FileText, 
-  Users, 
-  Calendar, 
-  TrendingUp, 
-  AlertCircle, 
-  CheckCircle, 
-  Scale, 
+import {
+  FileText,
+  Users,
+  Calendar,
+  TrendingUp,
+  AlertCircle,
+  CheckCircle,
+  Scale,
   Building2,
   Clock,
   Shield,
@@ -57,8 +57,8 @@ const CaseDescription = ({ caseData }: CaseDescriptionProps) => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5
@@ -218,7 +218,7 @@ const CaseDescription = ({ caseData }: CaseDescriptionProps) => {
                 </CardContent>
               </Card>
 
-            
+
             </motion.div>
 
             {/* Sidebar */}
@@ -260,7 +260,7 @@ const CaseDescription = ({ caseData }: CaseDescriptionProps) => {
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed">
                     Get a professional evaluation of your case with no obligation. Our experienced legal team will assess your situation and explain your options.
                   </p>
-                  
+
                   <motion.div
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -304,7 +304,7 @@ const CaseDescription = ({ caseData }: CaseDescriptionProps) => {
                   </p>
                   <Button asChild variant="outline" className="w-full border-2 border-primary text-primary hover:bg-primary/10">
                     <a href="tel:9085336944" className="flex items-center justify-center">
-                      Call (908) 533-6944
+                      Call (914) 300 2717
                     </a>
                   </Button>
                 </CardContent>

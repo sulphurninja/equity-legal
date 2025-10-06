@@ -78,9 +78,9 @@ const ClaimProcess = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
@@ -109,7 +109,7 @@ const ClaimProcess = () => {
           }}
           transition={{ duration: 25, repeat: Infinity }}
         />
-        
+
         {/* Floating Particles */}
         {[...Array(15)].map((_, i) => (
           <motion.div
@@ -163,7 +163,7 @@ const ClaimProcess = () => {
           />
 
           <p className="text-xl text-gray-600 leading-relaxed">
-            We've streamlined our legal process to minimize stress while 
+            We've streamlined our legal process to minimize stress while
             <span className="font-bold text-primary"> maximizing your compensation.</span>
             <br />
             <span className="text-lg opacity-90">No upfront fees. No hidden costs. Just results.</span>
@@ -179,7 +179,7 @@ const ClaimProcess = () => {
               <Clock className="w-5 h-5 text-blue-500 mr-2" />
               <span className="font-medium">Free Consultation</span>
             </div>
-          
+
           </div>
         </motion.div>
 
@@ -195,7 +195,7 @@ const ClaimProcess = () => {
           <div className="hidden lg:block relative">
             {/* Timeline Line */}
             <div className="absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary rounded-full opacity-20" />
-            
+
             <div className="grid grid-cols-5 gap-8">
               {steps.map((step, index) => (
                 <motion.div
@@ -236,7 +236,7 @@ const ClaimProcess = () => {
                       <CardDescription className="text-gray-600 mb-4 leading-relaxed">
                         {step.description}
                       </CardDescription>
-                      
+
                       {/* Features List */}
                       <div className="space-y-2">
                         {step.features.map((feature, idx) => (
@@ -276,7 +276,7 @@ const ClaimProcess = () => {
               >
                 <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-white/90 backdrop-blur-sm overflow-hidden group">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-blue-600" />
-                  
+
                   <CardHeader className="flex flex-row items-center space-x-4 pb-4">
                     <div className="relative">
                       <div className="bg-gradient-to-r from-primary to-blue-600 rounded-full p-4 text-white shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
@@ -300,7 +300,7 @@ const ClaimProcess = () => {
                     <CardDescription className="text-gray-600 mb-4 leading-relaxed">
                       {step.description}
                     </CardDescription>
-                    
+
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                       {step.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center text-sm text-gray-500">
@@ -355,7 +355,7 @@ const ClaimProcess = () => {
               <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Don't wait - many cases have strict deadlines. Get your free consultation today and learn about your legal options.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <motion.div
                   whileHover={{ scale: 1.05, y: -3 }}
@@ -375,11 +375,11 @@ const ClaimProcess = () => {
                     </Link>
                   </Button>
                 </motion.div>
-                
+
                 <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm">
                   <a href="tel:9085336944" className="flex items-center">
                     <Phone className="mr-3 h-5 w-5 group-hover:animate-pulse" />
-                    Call (908) 533-6944
+                    Call (914) 300 2717
                   </a>
                 </Button>
               </div>
@@ -394,7 +394,7 @@ const ClaimProcess = () => {
                   <div className="font-black text-2xl text-accent">24/7</div>
                   <div className="text-sm opacity-80">Available</div>
                 </div>
-              
+
               </div>
             </div>
           </div>

@@ -12,11 +12,11 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { 
-  HelpCircle, 
-  Plus, 
-  Phone, 
-  MessageCircle, 
+import {
+  HelpCircle,
+  Plus,
+  Phone,
+  MessageCircle,
   Clock,
   Shield,
   Users,
@@ -39,12 +39,12 @@ interface CaseFAQProps {
 
 const CaseFAQ = ({ caseData }: CaseFAQProps) => {
   // Categorize FAQs for better organization
-  const categorizeFAQs = (faqs: Array<{question: string, answer: string}>) => {
+  const categorizeFAQs = (faqs: Array<{ question: string, answer: string }>) => {
     // This is a simplified categorization - in real app, this would be more sophisticated
     const general = faqs.filter((_, index) => index < Math.ceil(faqs.length / 3));
     const legal = faqs.filter((_, index) => index >= Math.ceil(faqs.length / 3) && index < (2 * Math.ceil(faqs.length / 3)));
     const process = faqs.filter((_, index) => index >= (2 * Math.ceil(faqs.length / 3)));
-    
+
     return { general, legal, process };
   };
 
@@ -72,7 +72,7 @@ const CaseFAQ = ({ caseData }: CaseFAQProps) => {
     }
   ];
 
-  const allFAQs = [...caseData.faqs.map((faq, index) => ({...faq, category: 'case-specific', icon: HelpCircle})), ...commonFAQs];
+  const allFAQs = [...caseData.faqs.map((faq, index) => ({ ...faq, category: 'case-specific', icon: HelpCircle })), ...commonFAQs];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -87,8 +87,8 @@ const CaseFAQ = ({ caseData }: CaseFAQProps) => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5
@@ -248,16 +248,16 @@ const CaseFAQ = ({ caseData }: CaseFAQProps) => {
 
                 <Accordion type="multiple" className="w-full space-y-4">
                   {allFAQs.map((faq, index) => (
-                    <motion.div 
-                      key={index} 
+                    <motion.div
+                      key={index}
                       variants={itemVariants}
                       className="group"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.05 }}
                     >
-                      <AccordionItem 
-                        value={`faq-${index}`} 
+                      <AccordionItem
+                        value={`faq-${index}`}
                         className="border border-gray-200 rounded-xl px-4 sm:px-6 bg-white/60 hover:bg-white/80 transition-all duration-300 group-hover:shadow-md"
                       >
                         <AccordionTrigger className="text-left font-bold text-sm sm:text-base lg:text-lg text-primary hover:text-primary/80 py-4 sm:py-6 [&[data-state=open]>svg]:rotate-45">
@@ -322,7 +322,7 @@ const CaseFAQ = ({ caseData }: CaseFAQProps) => {
                         </Link>
                       </Button>
                     </motion.div>
-                    
+
                     <motion.div
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
@@ -330,7 +330,7 @@ const CaseFAQ = ({ caseData }: CaseFAQProps) => {
                       <Button asChild variant="outline" className="w-full bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white/50 font-bold">
                         <a href="tel:9085336944" className="flex items-center justify-center text-sm sm:text-base">
                           <Phone className="mr-2 h-4 w-4" />
-                          Call (908) 533-6944
+                          Call (914) 300 2717
                         </a>
                       </Button>
                     </motion.div>
@@ -362,7 +362,7 @@ const CaseFAQ = ({ caseData }: CaseFAQProps) => {
                       <span className="text-gray-600 text-sm">Cases Filed</span>
                       <span className="font-bold text-primary">2,500+</span>
                     </div>
-                   
+
                     <div className="flex items-center justify-between">
                       <span className="text-gray-600 text-sm">Avg Settlement</span>
                       <span className="font-bold text-primary">$125,000</span>

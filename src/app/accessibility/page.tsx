@@ -12,7 +12,7 @@ const AccessibilityPage = () => {
       <h1 className="text-4xl font-bold mb-8">Accessibility Statement</h1>
 
       <div className="prose prose-lg max-w-none">
-        <p className="text-lg mb-6">Last Updated: {new Date().toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric'})}</p>
+        <p className="text-lg mb-6">Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Our Commitment to Accessibility</h2>
         <p>Lex Claim Connect is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.</p>
@@ -46,7 +46,7 @@ const AccessibilityPage = () => {
         </ul>
         <p>To request an accommodation or report an accessibility issue, please contact our support team:</p>
         <p>Email: support@lexclaimconnect.com</p>
-        <p>Phone: (908) 864-0126</p>
+        <p>Phone: (914) 300 2717</p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Compatibility with Assistive Technology</h2>
         <p>Our website is designed to be compatible with the following assistive technologies:</p>
@@ -77,13 +77,13 @@ const AccessibilityPage = () => {
         <h2 className="text-2xl font-semibold mt-8 mb-4">Feedback</h2>
         <p>We welcome your feedback on the accessibility of Lex Claim Connect. Please let us know if you encounter accessibility barriers:</p>
         <p>Email: support@lexclaimconnect.com</p>
-        <p>Phone: (908) 533-6944</p>
+        <p>Phone: (914) 300 2717</p>
         {/* <p>Address: 613, Ridge Road, 201 Monmouth Junction, NJ, 08852</p> */}
         <p>We try to respond to feedback within 3 business days.</p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Ongoing Improvements</h2>
         <p>Lex Claim Connect is committed to continually improving accessibility for all users. We regularly review our website and services to identify and address accessibility issues, update our policies, and ensure that our accessibility goals are met.</p>
-        <p>This statement was created on {new Date().toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric'})} and will be reviewed and updated as our website and accessibility practices evolve.</p>
+        <p>This statement was created on {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} and will be reviewed and updated as our website and accessibility practices evolve.</p>
       </div>
     </div>
   );

@@ -1,17 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  DollarSign, 
-  Clock, 
-  ShieldAlert, 
-  TrendingUp, 
-  Calculator, 
-  CreditCard, 
-  Heart, 
-  Briefcase, 
-  Home, 
-  Phone, 
+import {
+  DollarSign,
+  Clock,
+  ShieldAlert,
+  TrendingUp,
+  Calculator,
+  CreditCard,
+  Heart,
+  Briefcase,
+  Home,
+  Phone,
   ArrowRight,
   CheckCircle,
   AlertCircle,
@@ -70,8 +70,8 @@ const CompensationInfo = ({ caseData }: CompensationInfoProps) => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5
@@ -333,7 +333,7 @@ const CompensationInfo = ({ caseData }: CompensationInfoProps) => {
                   <p className="text-primary/80 mb-6 text-sm leading-relaxed">
                     Get a professional estimate of what your case could be worth. Our experts will analyze your situation at no cost.
                   </p>
-                  
+
                   <motion.div
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -366,7 +366,7 @@ const CompensationInfo = ({ caseData }: CompensationInfoProps) => {
                     <p className="text-green-600 text-sm mb-4 leading-relaxed">
                       You pay absolutely nothing unless we successfully recover compensation for you. No upfront costs, no hidden fees.
                     </p>
-                    
+
                     <div className="space-y-3">
                       <div className="flex items-center text-green-700 text-sm">
                         <CheckCircle className="w-4 h-4 mr-2" />
@@ -413,7 +413,7 @@ const CompensationInfo = ({ caseData }: CompensationInfoProps) => {
                   </p>
                   <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white font-bold">
                     <a href="tel:9085336944">
-                      Call (908) 533-6944
+                      Call (914) 300 2717
                     </a>
                   </Button>
                 </CardContent>
@@ -429,7 +429,7 @@ const CompensationInfo = ({ caseData }: CompensationInfoProps) => {
                 <div className="bg-accent/20 rounded-full p-4 inline-flex items-center justify-center mb-6">
                   <Zap className="w-8 h-8 text-accent" />
                 </div>
-                
+
                 <h3 className="text-2xl sm:text-3xl font-black mb-4">
                   <span className="bg-gradient-to-r from-accent to-yellow-400 bg-clip-text text-transparent">
                     Ready to Discover
@@ -437,7 +437,7 @@ const CompensationInfo = ({ caseData }: CompensationInfoProps) => {
                   <br />
                   <span className="text-white">Your Case Value?</span>
                 </h3>
-                
+
                 <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
                   Don't settle for less than you deserve. Our compensation experts will fight to maximize your settlement.
                   <span className="font-bold text-accent"> Get your free case valuation today.</span>
@@ -456,7 +456,7 @@ const CompensationInfo = ({ caseData }: CompensationInfoProps) => {
                       </Link>
                     </Button>
                   </motion.div>
-                  
+
                   <motion.div
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.98 }}
@@ -464,14 +464,14 @@ const CompensationInfo = ({ caseData }: CompensationInfoProps) => {
                     <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm w-full sm:w-auto">
                       <a href="tel:9085336944">
                         <Phone className="mr-3 h-5 w-5" />
-                        Call (908) 533-6944
+                        Call (914) 300 2717
                       </a>
                     </Button>
                   </motion.div>
                 </div>
 
                 {/* Trust Indicators */}
-              
+
               </CardContent>
             </Card>
           </motion.div>

@@ -1,15 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  Check, 
-  CheckCircle, 
-  AlertCircle, 
-  Users, 
-  Calendar, 
-  MapPin, 
-  FileText, 
-  Phone, 
+import {
+  Check,
+  CheckCircle,
+  AlertCircle,
+  Users,
+  Calendar,
+  MapPin,
+  FileText,
+  Phone,
   ArrowRight,
   Shield,
   Clock,
@@ -55,8 +55,8 @@ const EligibilityCriteria = ({ caseData }: EligibilityCriteriaProps) => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5
@@ -66,8 +66,8 @@ const EligibilityCriteria = ({ caseData }: EligibilityCriteriaProps) => {
 
   const criteriaVariants = {
     hidden: { opacity: 0, x: -20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       x: 0,
       transition: {
         duration: 0.4
@@ -284,7 +284,7 @@ const EligibilityCriteria = ({ caseData }: EligibilityCriteriaProps) => {
                   <p className="text-primary/80 mb-6 text-sm leading-relaxed">
                     Get an instant assessment of your case eligibility. Takes less than 2 minutes.
                   </p>
-                  
+
                   <motion.div
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -305,7 +305,7 @@ const EligibilityCriteria = ({ caseData }: EligibilityCriteriaProps) => {
               </Card>
 
               {/* Success Stats */}
-             
+
 
               {/* Contact Card */}
               <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-blue-500/5 shadow-lg">
@@ -319,7 +319,7 @@ const EligibilityCriteria = ({ caseData }: EligibilityCriteriaProps) => {
                   <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                     Not sure if you qualify? Our legal experts can help determine your eligibility over the phone.
                   </p>
-                  
+
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -327,7 +327,7 @@ const EligibilityCriteria = ({ caseData }: EligibilityCriteriaProps) => {
                     <Button asChild className="w-full bg-primary hover:bg-primary/90 text-white font-bold">
                       <a href="tel:9085336944">
                         <Phone className="mr-2 h-4 w-4" />
-                        Call (908) 533-6944
+                        Call (914) 300 2717
                       </a>
                     </Button>
                   </motion.div>
@@ -364,7 +364,7 @@ const EligibilityCriteria = ({ caseData }: EligibilityCriteriaProps) => {
                 <div className="bg-accent/20 rounded-full p-4 inline-flex items-center justify-center mb-6">
                   <Scale className="w-8 h-8 text-accent" />
                 </div>
-                
+
                 <h3 className="text-2xl sm:text-3xl font-black mb-4">
                   <span className="bg-gradient-to-r from-accent to-yellow-400 bg-clip-text text-transparent">
                     Think You Qualify?
@@ -372,7 +372,7 @@ const EligibilityCriteria = ({ caseData }: EligibilityCriteriaProps) => {
                   <br />
                   <span className="text-white">Let's Find Out Together</span>
                 </h3>
-                
+
                 <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
                   Our experienced legal team will review your specific situation and determine your eligibility for compensation.
                   <span className="font-bold text-accent"> Get your free case evaluation now.</span>
@@ -391,7 +391,7 @@ const EligibilityCriteria = ({ caseData }: EligibilityCriteriaProps) => {
                       </Link>
                     </Button>
                   </motion.div>
-                  
+
                   <motion.div
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.98 }}
@@ -399,7 +399,7 @@ const EligibilityCriteria = ({ caseData }: EligibilityCriteriaProps) => {
                     <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm w-full sm:w-auto">
                       <a href="tel:9085336944">
                         <Phone className="mr-3 h-5 w-5" />
-                        Call (908) 533-6944
+                        Call (914) 300 2717
                       </a>
                     </Button>
                   </motion.div>

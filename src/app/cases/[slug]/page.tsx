@@ -76,7 +76,7 @@ export default async function CaseDetailPage({
       <section id='#casereview'>
         <CaseEvaluation />
       </section>
-     
+
 
       {/* Trust Banner */}
       <section className="bg-gradient-to-r from-primary/5 to-blue-500/5 py-8 sm:py-12">
@@ -297,7 +297,7 @@ export default async function CaseDetailPage({
               <br />
               <span className="text-white">For Your Rights?</span>
             </h2>
-            
+
             <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
               Don't let corporations get away with harming you. Our experienced legal team is ready to fight for the compensation you deserve.
               <span className="font-bold text-accent"> You pay nothing unless we win.</span>
@@ -310,11 +310,11 @@ export default async function CaseDetailPage({
                   <ArrowRight className="ml-3 h-5 w-5" />
                 </Link>
               </Button>
-              
+
               <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm w-full sm:w-auto">
                 <a href="tel:9085336944">
                   <Phone className="mr-3 h-5 w-5" />
-                  Call (908) 533-6944
+                  Call (914) 300 2717
                 </a>
               </Button>
             </div>

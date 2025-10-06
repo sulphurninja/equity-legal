@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  HelpCircle, 
-  ArrowUpRight, 
-  Plus, 
-  Phone, 
-  MessageCircle, 
+import {
+  HelpCircle,
+  ArrowUpRight,
+  Plus,
+  Phone,
+  MessageCircle,
   Clock,
   Shield,
   Users,
@@ -119,8 +119,8 @@ const FrequentlyAskedQuestions = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: {
         duration: 0.5
@@ -266,16 +266,16 @@ const FrequentlyAskedQuestions = () => {
 
               <Accordion type="multiple" className="w-full space-y-4">
                 {allFaqs.map((faq, index) => (
-                  <motion.div 
-                    key={faq.id} 
+                  <motion.div
+                    key={faq.id}
                     variants={itemVariants}
                     className="group"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <AccordionItem 
-                      value={faq.id} 
+                    <AccordionItem
+                      value={faq.id}
                       className="border border-gray-200 rounded-xl px-4 sm:px-6 bg-white/60 hover:bg-white/80 transition-all duration-300 group-hover:shadow-md"
                     >
                       <AccordionTrigger className="text-left font-bold text-sm sm:text-base lg:text-lg text-primary hover:text-primary/80 py-4 sm:py-6 [&[data-state=open]>svg]:rotate-45">
@@ -351,7 +351,7 @@ const FrequentlyAskedQuestions = () => {
                       </Link>
                     </Button>
                   </motion.div>
-                  
+
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -359,7 +359,7 @@ const FrequentlyAskedQuestions = () => {
                     <Button asChild variant="outline" className="w-full bg-white/10 hover:bg-white/20 text-white border-white/30 hover:border-white/50 font-bold">
                       <a href="tel:9085336944" className="flex items-center justify-center text-sm sm:text-base">
                         <Phone className="mr-2 h-4 w-4" />
-                        Call (908) 533-6944
+                        Call (914) 300 2717
                       </a>
                     </Button>
                   </motion.div>
@@ -380,7 +380,7 @@ const FrequentlyAskedQuestions = () => {
             </Card>
 
             {/* Quick Stats */}
-           
+
             {/* Urgency Card */}
             <Card className="border-2 border-red-200 bg-gradient-to-br from-red-50 to-orange-50 shadow-lg">
               <CardContent className="p-6">

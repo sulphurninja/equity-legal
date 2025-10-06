@@ -28,14 +28,14 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
+
       // Hide/show header based on scroll direction
       if (currentScrollY > lastScrollY && currentScrollY > 150) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
       }
-      
+
       setScrolled(currentScrollY > 50);
       setLastScrollY(currentScrollY);
     };
@@ -70,7 +70,7 @@ const Header = () => {
       {/* Trust Bar */}
       <AnimatePresence>
         {!scrolled && (
-          <motion.div 
+          <motion.div
             className="bg-gradient-to-r from-emerald-600 to-emerald-500 text-white py-2.5 relative overflow-hidden"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
@@ -132,7 +132,7 @@ const Header = () => {
                   )}>
                     Lex Claim Connect
                   </div>
-                 
+
                 </div>
               </Link>
             </motion.div>
@@ -142,7 +142,7 @@ const Header = () => {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger 
+                    <NavigationMenuTrigger
                       className={cn(
                         "font-semibold transition-all duration-300",
                         scrolled ? "text-primary hover:text-primary/80" : "text-white hover:text-white/90"
@@ -155,7 +155,7 @@ const Header = () => {
                         {/* Popular Cases */}
                         <div className="px-6 py-6 bg-gradient-to-br from-blue-50 to-indigo-50 border-r border-gray-200">
                           <h4 className="font-bold text-primary mb-4 flex items-center">
-                            <Award className="w-5 h-5 mr-2 text-yellow-500" /> 
+                            <Award className="w-5 h-5 mr-2 text-yellow-500" />
                             Most Popular
                           </h4>
                           <ul className="space-y-3">
@@ -182,7 +182,7 @@ const Header = () => {
                         {/* Medical Cases */}
                         <div className="px-6 py-6 bg-gradient-to-br from-green-50 to-emerald-50 border-r border-gray-200">
                           <h4 className="font-bold text-primary mb-4 flex items-center">
-                            <Scale className="w-5 h-5 mr-2 text-green-500" /> 
+                            <Scale className="w-5 h-5 mr-2 text-green-500" />
                             Medical & Pharma
                           </h4>
                           <ul className="space-y-3">
@@ -206,7 +206,7 @@ const Header = () => {
                         {/* Environmental Cases */}
                         <div className="px-6 py-6 bg-gradient-to-br from-purple-50 to-violet-50">
                           <h4 className="font-bold text-primary mb-4 flex items-center">
-                            <Scale className="w-5 h-5 mr-2 text-purple-500" /> 
+                            <Scale className="w-5 h-5 mr-2 text-purple-500" />
                             Environmental
                           </h4>
                           <ul className="space-y-3">
@@ -254,7 +254,7 @@ const Header = () => {
                   ].map((item) => (
                     <NavigationMenuItem key={item.href}>
                       <Link href={item.href} legacyBehavior passHref>
-                        <NavigationMenuLink 
+                        <NavigationMenuLink
                           className={cn(
                             navigationMenuTriggerStyle(),
                             "font-semibold transition-all duration-300",
@@ -275,8 +275,8 @@ const Header = () => {
               {/* Phone number */}
               <div className={cn(
                 "hidden md:flex items-center space-x-3 p-3 rounded-xl transition-all duration-300",
-                scrolled 
-                  ? "bg-gradient-to-r from-primary/5 to-blue-500/5 text-primary" 
+                scrolled
+                  ? "bg-gradient-to-r from-primary/5 to-blue-500/5 text-primary"
                   : "bg-white/10 backdrop-blur-sm text-white"
               )}>
                 <div className="bg-white /20 rounded-full p-2">
@@ -284,19 +284,19 @@ const Header = () => {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs opacity-90 font-medium">Free Call</span>
-                  <a 
-                    href="tel:9085336944" 
+                  <a
+                    href="tel:9085336944"
                     className="font-bold hover:text-accent transition-colors duration-300"
                   >
-                    (908) 533-6944
+                    (914) 300 2717
                   </a>
                 </div>
               </div>
 
               {/* CTA Button */}
-              <Button 
-                asChild 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="hidden lg:flex bg-gradient-to-r from-accent to-yellow-400 hover:from-accent/90 hover:to-yellow-400/90 text-primary font-bold shadow-lg transition-all duration-300 hover:scale-105"
               >
                 <Link href="#case-evaluation">
@@ -308,9 +308,9 @@ const Header = () => {
               <div className="lg:hidden">
                 <Sheet>
                   <SheetTrigger asChild>
-                    <Button 
-                      variant="ghost" 
-                      size="icon" 
+                    <Button
+                      variant="ghost"
+                      size="icon"
                       className={cn(
                         "rounded-full",
                         scrolled ? "text-primary hover:bg-primary/10" : "text-white hover:bg-white/20"
@@ -385,7 +385,7 @@ const Header = () => {
                         <div className="flex justify-center mt-4">
                           <a href="tel:9085336944" className="flex items-center text-primary font-bold hover:text-primary/80 transition-colors">
                             <Phone className="mr-2" size={16} />
-                            Call (908) 533-6944
+                            Call (914) 300 2717
                           </a>
                         </div>
                         <div className="text-center mt-2 text-xs text-gray-500">

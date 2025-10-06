@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function CasesPage() {
   const caseTypes = getAllCaseTypes();
-  
+
   // Separate hot and regular cases
   const hotCases = caseTypes.filter(caseType => caseType.featured);
   const regularCases = caseTypes.filter(caseType => !caseType.featured);
@@ -32,7 +32,7 @@ export default function CasesPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12" />
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
-          
+
           {/* Floating Elements */}
           {[...Array(8)].map((_, i) => (
             <div
@@ -69,7 +69,7 @@ export default function CasesPage() {
               <span className="font-bold text-accent"> Review our current cases to see if you qualify for compensation.</span>
             </p>
 
-           
+
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
@@ -80,7 +80,7 @@ export default function CasesPage() {
                   <ArrowRight className="ml-3 h-5 w-5" />
                 </Link>
               </Button>
-              
+
               <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg backdrop-blur-sm w-full sm:w-auto">
                 <Link href="#case-evaluation" className="flex items-center justify-center">
                   <CheckCircle className="mr-3 h-5 w-5" />
@@ -106,7 +106,7 @@ export default function CasesPage() {
                 <Zap className="w-4 h-4 mr-2" />
                 HOT CASES - URGENT DEADLINES
               </Badge>
-              
+
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary mb-4 sm:mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
                   Time-Sensitive
@@ -114,7 +114,7 @@ export default function CasesPage() {
                 <br />
                 <span className="text-gray-800">Legal Cases</span>
               </h2>
-              
+
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                 These cases have
                 <span className="font-bold text-red-600"> strict filing deadlines.</span>
@@ -156,7 +156,7 @@ export default function CasesPage() {
                     <h3 className="text-lg sm:text-xl font-black text-primary mb-3 group-hover:text-blue-600 transition-colors leading-tight">
                       {caseType.title}
                     </h3>
-                    
+
                     <p className="text-gray-600 mb-4 sm:mb-6 flex-grow text-sm sm:text-base leading-relaxed">
                       {caseType.shortDescription}
                     </p>
@@ -179,7 +179,7 @@ export default function CasesPage() {
                           <ArrowRight size={16} className="ml-2" />
                         </Link>
                       </Button>
-                      
+
                       <Button asChild variant="outline" className="w-full border-2 border-primary/20 text-primary hover:bg-primary/10">
                         <Link href={`/cases/${caseType.slug}`}>
                           View Case Details
@@ -224,7 +224,7 @@ export default function CasesPage() {
               <Scale className="w-4 h-4 mr-2" />
               ALL ACTIVE CASES
             </Badge>
-            
+
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary mb-4 sm:mb-6 leading-tight">
               <span className="bg-gradient-to-r from-primary via-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 Complete Case
@@ -232,7 +232,7 @@ export default function CasesPage() {
               <br />
               <span className="text-gray-800">Portfolio</span>
             </h2>
-            
+
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Browse our full range of active legal cases.
               <span className="font-bold text-primary"> Each case represents an opportunity for justice and compensation.</span>
@@ -250,7 +250,7 @@ export default function CasesPage() {
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  
+
                   {/* Category Badge */}
                   <div className="absolute top-4 left-4">
                     <Badge className="bg-white/90 text-primary font-bold text-xs backdrop-blur-sm">
@@ -272,7 +272,7 @@ export default function CasesPage() {
                   <h3 className="text-lg sm:text-xl font-black text-primary mb-3 group-hover:text-blue-600 transition-colors leading-tight">
                     {caseType.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 mb-4 sm:mb-6 flex-grow text-sm sm:text-base leading-relaxed">
                     {caseType.shortDescription}
                   </p>
@@ -300,7 +300,7 @@ export default function CasesPage() {
                         </span>
                       </Link>
                     </Button>
-                    
+
                     <Button asChild variant="outline" className="w-full border-2 border-gray-200 text-gray-700 hover:bg-gray-50 font-medium">
                       <Link href={`/cases/${caseType.slug}`}>
                         View Details
@@ -335,7 +335,7 @@ export default function CasesPage() {
               <br />
               <span className="text-white">Applies to You?</span>
             </h2>
-            
+
             <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
               Our expert legal team can help determine if you qualify for compensation based on your specific situation.
               <span className="font-bold text-accent"> No fees</span>
@@ -348,16 +348,16 @@ export default function CasesPage() {
                   <ArrowRight className="ml-3 h-5 w-5" />
                 </Link>
               </Button>
-              
+
               <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm w-full sm:w-auto">
                 <a href="tel:9085336944">
-                  Call (908) 533-6944
+                  Call (914) 300 2717
                 </a>
               </Button>
             </div>
 
             {/* Final Trust Indicators */}
-         
+
           </div>
         </div>
       </section>

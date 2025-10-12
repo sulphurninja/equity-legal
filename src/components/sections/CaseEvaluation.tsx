@@ -233,7 +233,7 @@ const CaseEvaluation = () => {
   };
 
   return (
-    <section id="case-evaluation" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
+    <section id="case-evaluation" className="py-20 p bg-gradient-to-br from-gray-50 to-blue-50/30">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -259,9 +259,9 @@ const CaseEvaluation = () => {
         </motion.div>
 
         <div className="max-w-3xl mx-auto">
-          <Card className="border-none shadow-2xl overflow-hidden bg-white/95 backdrop-blur-sm">
+          <Card className="border-none shadow-2xl p-0 overflow-hidden bg-white/95 backdrop-blur-sm">
             <CardHeader className="bg-gradient-to-r from-primary/5 to-blue-50 text-center pb-8">
-              <CardTitle className="text-2xl font-bold text-primary">
+              <CardTitle className="text-2xl mt-4 font-bold text-primary">
                 Find Out If You Qualify for Compensation
                 {/* Debug info - remove in production */}
                 {process.env.NODE_ENV === 'development' && (

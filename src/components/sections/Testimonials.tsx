@@ -376,7 +376,7 @@ const Testimonials = () => {
                     whileTap={{ scale: 0.98 }}
                   >
                     <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm w-full sm:w-auto">
-                      <a href="tel:9085336944">Call (914) 300 2717</a>
+                      <a href="tel:+14849649966">Call +14849649966</a>
                     </Button>
                   </motion.div>
                 </div>
@@ -394,3 +394,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+

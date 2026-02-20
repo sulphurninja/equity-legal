@@ -415,79 +415,49 @@ const CaseEvaluation = () => {
 
                     <div className="flex items-start space-x-3">
                       <Checkbox
-                        id="agreeToQualification"
-                        checked={formData.agreeToQualification}
-                        onCheckedChange={(checked) =>
-                          handleCheckboxChange("agreeToQualification", checked as boolean)
+                        id="agreeToAll"
+                        checked={
+                          formData.agreeToQualification &&
+                          formData.agreeToTermsAndContact &&
+                          formData.agreeToDisclaimer
                         }
+                        onCheckedChange={(checked) => {
+                          const value = Boolean(checked);
+                          setFormData((prev) => ({
+                            ...prev,
+                            agreeToQualification: value,
+                            agreeToTermsAndContact: value,
+                            agreeToDisclaimer: value,
+                          }));
+                        }}
                         className="mt-1"
                         data-tf-element-role="consent-opt-in"
                       />
                       <label
-                        htmlFor="agreeToQualification"
-                        className="text-sm text-gray-800 cursor-pointer leading-relaxed"
+                        htmlFor="agreeToAll"
+                        className="text-sm text-gray-800 cursor-pointer leading-relaxed space-y-2"
                         data-tf-element-role="consent-language"
                       >
-                        I may need help to find out if I may qualify for a settlement claim
-                      </label>
-                    </div>
-
-                    <div className="flex items-start space-x-3">
-                      <Checkbox
-                        id="agreeToTermsAndContact"
-                        checked={formData.agreeToTermsAndContact}
-                        onCheckedChange={(checked) =>
-                          handleCheckboxChange("agreeToTermsAndContact", checked as boolean)
-                        }
-                        className="mt-1"
-                        data-tf-element-role="consent-opt-in"
-                      />
-                      <label
-                        htmlFor="agreeToTermsAndContact"
-                        className="text-sm text-gray-800 cursor-pointer leading-relaxed"
-                        data-tf-element-role="consent-language"
-                      >
-                        I agree to the Terms of Service and Privacy Policy and authorize lexclaimconnect.com and up to 4
-                        law firms, 3rd party providers and/or PLM to contact me by telephone, email, artificial voice
-                        and/or pre-recorded/text messages, using an automated telephone technology directs to the number
-                        or contact details provided above. I may additionally receive offers and/or information on offers
-                        and various services these providers offer, and I agree to such contact, even if my phone number
-                        is currently listed on any state, federal or corporate 'Do Not Call' list or registry. You may
-                        revoke this consent at any time. Message and data rates may apply. Your consent is NOT based on
-                        any condition of purchase of products and acceptance of services by any provider. The decision to
-                        engage with or contract for services with any provider is entirely up to your discretion.
-                      </label>
-                    </div>
-
-                    <div className="flex items-start space-x-3">
-                      <Checkbox
-                        id="agreeToDisclaimer"
-                        checked={formData.agreeToDisclaimer}
-                        onCheckedChange={(checked) =>
-                          handleCheckboxChange("agreeToDisclaimer", checked as boolean)
-                        }
-                        className="mt-1"
-                        data-tf-element-role="consent-opt-in"
-                      />
-                      <label
-                        htmlFor="agreeToDisclaimer"
-                        className="text-sm text-gray-800 cursor-pointer leading-relaxed"
-                        data-tf-element-role="consent-language"
-                      >
-                        Lex Claim Connect ("www.lexclaimconnect.com") is not a law firm and not a lawyer referral
-                        service; nor is it a substitute for hiring an attorney or law firm. Any information displayed or
-                        provided on the Site is for personal use only. This Site offers no legal, business, or tax
-                        advice, recommendations, mediation or counseling in connection with any legal matter, under any
-                        circumstances, and nothing we do and no element of the Site or the Site's call connect
-                        functionality ("Call Service") should be construed as such. Some of the attorneys, law firms and
-                        legal service providers (collectively, "Third Party Legal Professionals") are accessible via the
-                        Call Service by virtue of their payment of a fee to promote their respective services to users of
-                        the Call Service and should be considered as advertising. This Site does not endorse or recommend
-                        any participating Third-Party Legal Professionals. Your use of the Site or Call Service is not
-                        intended to create, and any information submitted to the Site and/or any electronic or other
-                        communication sent to the Site will not create a contract for representation or an
-                        attorney-client relationship between you and these Site or any of the Third Party Legal
-                        Professionals.
+                        <span>
+                          By clicking the button above, I provide my electronic signature hereby agreeing to this
+                          website&apos;s{" "}
+                          <a href="/privacy-policy" className="font-semibold underline">PRIVACY POLICY</a>,{" "}
+                          <a href="/privacy-policy" className="font-semibold underline">TCPA Consent</a>{" "}
+                          &amp;{" "}
+                          <a href="/disclaimer" className="font-semibold underline">Privacy Disclaimer</a>.
+                        </span>
+                        <span className="block">
+                          I expressly consent to receive marketing &amp; telemarketing contact, including calls to my
+                          cellular phone, via automatic telephone dialing system, emails, and/or text messages from this
+                          website and trusted partners, attorneys or their agents regarding services indicated in this
+                          website. I will receive contact even if I previously registered on a state or federal do not
+                          contact list.
+                        </span>
+                        <span className="block">
+                          I understand that my consent to receive communications in this manner is not required as a
+                          condition of purchasing any goods or services. My telephone company may impose charges for
+                          these contacts.
+                        </span>
                       </label>
                     </div>
                   </div>

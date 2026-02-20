@@ -307,9 +307,9 @@ const CaseTypesList = () => {
               </Button>
 
               <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm transition-all duration-300">
-                <a href="tel:9085336944" className="flex items-center">
+                <a href="tel:+14849649966" className="flex items-center">
                   <Shield className="mr-3 h-5 w-5" />
-                  Call (914) 300 2717
+                  Call +14849649966
                 </a>
               </Button>
             </div>
@@ -334,3 +334,4 @@ const CaseTypesList = () => {
 };
 
 export default CaseTypesList;
+

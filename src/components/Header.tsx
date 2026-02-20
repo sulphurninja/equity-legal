@@ -285,10 +285,10 @@ const Header = () => {
                 <div className="flex flex-col">
                   <span className="text-xs opacity-90 font-medium">Free Call</span>
                   <a
-                    href="tel:9085336944"
+                    href="tel:+14849649966"
                     className="font-bold hover:text-accent transition-colors duration-300"
                   >
-                    (914) 300 2717
+                    +14849649966
                   </a>
                 </div>
               </div>
@@ -383,9 +383,9 @@ const Header = () => {
                           </Link>
                         </Button>
                         <div className="flex justify-center mt-4">
-                          <a href="tel:9085336944" className="flex items-center text-primary font-bold hover:text-primary/80 transition-colors">
+                          <a href="tel:+14849649966" className="flex items-center text-primary font-bold hover:text-primary/80 transition-colors">
                             <Phone className="mr-2" size={16} />
-                            Call (914) 300 2717
+                            Call +14849649966
                           </a>
                         </div>
                         <div className="text-center mt-2 text-xs text-gray-500">
@@ -405,3 +405,4 @@ const Header = () => {
 };
 
 export default Header;
+

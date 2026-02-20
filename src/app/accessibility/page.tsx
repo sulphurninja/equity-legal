@@ -46,7 +46,7 @@ const AccessibilityPage = () => {
         </ul>
         <p>To request an accommodation or report an accessibility issue, please contact our support team:</p>
         <p>Email: support@lexclaimconnect.com</p>
-        <p>Phone: (914) 300 2717</p>
+        <p>Phone: +14849649966</p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Compatibility with Assistive Technology</h2>
         <p>Our website is designed to be compatible with the following assistive technologies:</p>
@@ -77,7 +77,7 @@ const AccessibilityPage = () => {
         <h2 className="text-2xl font-semibold mt-8 mb-4">Feedback</h2>
         <p>We welcome your feedback on the accessibility of Lex Claim Connect. Please let us know if you encounter accessibility barriers:</p>
         <p>Email: support@lexclaimconnect.com</p>
-        <p>Phone: (914) 300 2717</p>
+        <p>Phone: +14849649966</p>
         {/* <p>Address: 613, Ridge Road, 201 Monmouth Junction, NJ, 08852</p> */}
         <p>We try to respond to feedback within 3 business days.</p>
 
@@ -90,3 +90,4 @@ const AccessibilityPage = () => {
 };
 
 export default AccessibilityPage;
+

@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
       <div className="pt-0"> {/* Removed extra padding since Hero handles its own spacing */}
         <Hero />
-        <CaseEvaluation />c
+        <CaseEvaluation />
         <CaseTypesList />
         <ClaimProcess />
         <CaseEvaluation />

@@ -148,7 +148,7 @@ export default async function CaseDetailPage({
                 </Button>
 
                 <Button asChild variant="outline" size="lg" className="border-2 border-red-300 text-red-700 hover:bg-red-50 font-bold px-8 py-6 text-lg w-full sm:w-auto">
-                  <a href="tel:9085336944">
+                  <a href="tel:+14849649966">
                     <Phone className="mr-3 h-5 w-5" />
                     Call Emergency Line
                   </a>
@@ -312,9 +312,9 @@ export default async function CaseDetailPage({
               </Button>
 
               <Button asChild variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm w-full sm:w-auto">
-                <a href="tel:9085336944">
+                <a href="tel:+14849649966">
                   <Phone className="mr-3 h-5 w-5" />
-                  Call (914) 300 2717
+                  Call +14849649966
                 </a>
               </Button>
             </div>
@@ -339,3 +339,4 @@ export default async function CaseDetailPage({
     </main>
   );
 }
+

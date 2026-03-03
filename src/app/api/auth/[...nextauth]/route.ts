@@ -11,6 +11,8 @@ const adminUsers = [
 ];
 
 const handler = NextAuth({
+  secret: process.env.NEXTAUTH_SECRET,
+  trustHost: true,
   providers: [
     CredentialsProvider({
       name: "Credentials",

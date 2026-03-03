@@ -33,6 +33,16 @@ import React from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const floatingDots = [
+    { left: 4.6367, top: 16.4036, duration: 6.2, delay: 0.4 },
+    { left: 48.515, top: 51.048, duration: 5.4, delay: 0.9 },
+    { left: 32.7108, top: 52.9395, duration: 6.8, delay: 0.2 },
+    { left: 62.4488, top: 38.256, duration: 5.9, delay: 1.1 },
+    { left: 51.8368, top: 7.0099, duration: 7.1, delay: 0.6 },
+    { left: 19.076, top: 43.471, duration: 6.5, delay: 0.3 },
+    { left: 28.2958, top: 67.1152, duration: 5.7, delay: 1.3 },
+    { left: 42.9427, top: 42.033, duration: 6.1, delay: 0.8 },
+  ];
 
   const socialLinks = [
     { icon: <Facebook size={18} />, label: "Facebook", href: "#" },
@@ -111,13 +121,13 @@ const Footer = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full border-[20px] border-accent/10" />
 
         {/* Floating Elements */}
-        {[...Array(8)].map((_, i) => (
+        {floatingDots.map((dot, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-accent/30 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${dot.left}%`,
+              top: `${dot.top}%`,
             }}
             animate={{
               y: [-20, -60, -20],
@@ -125,9 +135,9 @@ const Footer = () => {
               scale: [1, 1.5, 1],
             }}
             transition={{
-              duration: Math.random() * 4 + 3,
+              duration: dot.duration,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: dot.delay,
             }}
           />
         ))}

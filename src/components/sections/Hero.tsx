@@ -153,8 +153,9 @@ const Hero = () => {
             variants={itemVariants}
           >
             We connect victims with top attorneys who fight for maximum compensation
-
-
+            <span className="block mt-3 text-base md:text-lg text-gray-200">
+              Over $1.38 Billion has been recovered in similar product liability cases nationwide see if you qualify.
+            </span>
           </motion.p>
 
           {/* CTA Buttons */}
@@ -342,4 +343,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

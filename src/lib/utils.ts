@@ -701,6 +701,46 @@ export const getAllCaseTypes = (): CaseType[] => {
       ]
     },
     {
+      id: "27",
+      slug: "rideshare",
+      title: "Rideshare ",
+      shortDescription: "Passengers, drivers, and pedestrians injured in Uber or Lyft crashes may be eligible for compensation.",
+      fullDescription: "Rideshare accidents involve Uber, Lyft, and other app-based transportation services. Liability can depend on whether the driver was logged into the app, waiting for a ride, or actively transporting a passenger, which affects which insurance policies apply. Injured passengers, rideshare drivers, pedestrians, bicyclists, and occupants of other vehicles may all have claims. These cases often require careful investigation of driver conduct, app status, and available insurance coverage to maximize compensation.",
+      imageUrl: "/images/cases/mva.jpg",
+      compensationInfo: "Compensation may include medical expenses, future care costs, lost wages, diminished earning capacity, pain and suffering, and property damage. Amounts depend on injury severity, available insurance limits, and comparative fault.",
+      eligibilityCriteria: [
+        "Injured in a crash involving an Uber, Lyft, or other rideshare vehicle",
+        "The rideshare driver or another party was at least partially at fault",
+        "Documented injuries requiring medical treatment",
+        "Accident occurred within the applicable statute of limitations"
+      ],
+      relatedConditions: [
+        "Traumatic Brain Injury (TBI)",
+        "Whiplash and Neck Injuries",
+        "Broken Bones and Fractures",
+        "Spinal Cord Injuries",
+        "Back and Shoulder Injuries",
+        "Internal Injuries",
+        "Soft Tissue Injuries",
+        "Lacerations and Scarring",
+        "Post-Traumatic Stress Disorder (PTSD)"
+      ],
+      faqs: [
+        {
+          question: "Who pays for a rideshare accident?",
+          answer: "It depends on the driver's app status. If the driver was offline, their personal auto insurance typically applies. If they were waiting for a ride or en route to pick up a passenger, rideshare coverage may apply. If a passenger was in the vehicle, the rideshare company usually provides higher commercial limits. Coverage rules vary by state, so a case review is important."
+        },
+        {
+          question: "What if I was a rideshare passenger?",
+          answer: "Passengers can usually pursue claims against the at-fault driver, and rideshare insurance may cover injuries when the ride is active. In some cases, multiple policies apply. An attorney can help identify all available coverage and maximize recovery."
+        },
+        {
+          question: "What should I do after a rideshare crash?",
+          answer: "Seek medical care, call the police, and report the crash in the rideshare app. Take photos of the scene, collect driver and witness information, and save trip details or screenshots. Avoid giving recorded statements to insurers before getting legal advice."
+        }
+      ]
+    },
+    {
       id: "25",
       slug: "slip-and-fall",
       title: "Slip and Fall Accident",

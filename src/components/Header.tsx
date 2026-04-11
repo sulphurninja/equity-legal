@@ -286,7 +286,7 @@ const Header = () => {
                   <span className="text-xs opacity-90 font-medium">Free Call</span>
                   <a
                     href="tel:+14844819642"
-                    className="font-bold hover:text-accent transition-colors duration-300"
+                    className="font-bold"
                   >
                     +1 484-481-9642
                   </a>

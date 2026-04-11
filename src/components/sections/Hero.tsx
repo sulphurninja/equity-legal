@@ -154,7 +154,6 @@ const Hero = () => {
           >
             We connect victims with top attorneys who fight for maximum compensation
             <span className="block mt-3 text-base md:text-lg text-gray-200">
-              Over $1.38 Billion has been recovered in similar product liability cases nationwide see if you qualify.
             </span>
           </motion.p>
 
@@ -210,9 +209,9 @@ const Hero = () => {
                 size="lg"
                 className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 hover:border-white/50 font-bold px-8 py-6 text-lg backdrop-blur-sm shadow-xl group"
               >
-                <a href="tel:+14849649966" className="flex items-center">
+                <a href="tel:+14844819642" className="flex items-center">
                   <Phone className="mr-3 h-5 w-5 group-hover:animate-pulse" />
-                  Call +14849649966
+                  Call +1 484-481-9642
                 </a>
               </Button>
             </motion.div>
@@ -343,3 +342,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

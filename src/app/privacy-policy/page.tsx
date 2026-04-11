@@ -98,7 +98,7 @@ const PrivacyPolicyPage = () => {
         <h2 className="text-2xl font-semibold mt-8 mb-4">11. Contact Us</h2>
         <p>If you have any questions about this Privacy Policy, please contact us at:</p>
         <p>Email: support@lexclaimconnect.com</p>
-        <p>Phone: +14849649966</p>
+        <p>Phone: +1 484-481-9642</p>
         <p>Address: 613, Ridge Road, 201 Monmouth Junction, NJ, 08852</p>
       </div>
     </div>
@@ -106,4 +106,5 @@ const PrivacyPolicyPage = () => {
 };
 
 export default PrivacyPolicyPage;
+
 

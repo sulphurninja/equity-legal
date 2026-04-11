@@ -176,9 +176,9 @@ const Footer = () => {
               whileTap={{ scale: 0.98 }}
             >
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-primary font-black px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg shadow-xl hover:shadow-2xl w-full sm:w-auto">
-                <a href="tel:+14849649966" className="flex items-center justify-center">
+                <a href="tel:+14844819642" className="flex items-center justify-center">
                   <Phone className="mr-3 h-5 w-5" />
-                  Call +14849649966
+                  Call +1 484-481-9642
                   <motion.div
                     animate={{ x: [0, 5, 0] }}
                     transition={{ duration: 1.5, repeat: Infinity }}
@@ -269,14 +269,14 @@ const Footer = () => {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <a href="tel:+14849649966" className="flex items-start">
+                  <a href="tel:+14844819642" className="flex items-start">
                     <div className="bg-accent/20 rounded-full p-3 mr-4 group-hover:bg-accent/30 transition-colors">
                       <Phone className="w-5 h-5 text-accent" />
                     </div>
                     <div>
                       <p className="font-bold text-white mb-1 text-sm sm:text-base">Call Us Now</p>
                       <p className="text-accent font-black text-lg sm:text-xl hover:text-accent/80 transition-colors">
-                        +14849649966
+                        +1 484-481-9642
                       </p>
                       <p className="text-white/60 text-xs sm:text-sm">Available 24/7 for emergencies</p>
                     </div>
@@ -443,4 +443,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
 

@@ -49,6 +49,7 @@ interface Submission {
   exposurePeriod?: string;
   medicalCondition?: string;
   additionalInfo?: string;
+  trustedFormCertUrl?: string;
   ipAddress: string;
   userAgent: string;
   createdAt: string;
@@ -285,6 +286,21 @@ export default function AdminDashboard() {
                 <h3 className="font-medium text-sm text-gray-500">Technical Information</h3>
                 <p><span className="font-medium">IP Address:</span> {selectedSubmission.ipAddress}</p>
                 <p><span className="font-medium">User Agent:</span> {selectedSubmission.userAgent}</p>
+                <div>
+                  <span className="font-medium">Trusted URL:</span>{" "}
+                  {selectedSubmission.trustedFormCertUrl ? (
+                    <a
+                      href={selectedSubmission.trustedFormCertUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 underline underline-offset-2"
+                    >
+                      Trusted Certificate
+                    </a>
+                  ) : (
+                    <span className="text-gray-500">Not available</span>
+                  )}
+                </div>
                 <p><span className="font-medium">Submitted:</span> {new Date(selectedSubmission.createdAt).toLocaleString()}</p>
               </div>
             </div>

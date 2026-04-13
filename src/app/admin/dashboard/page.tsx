@@ -35,7 +35,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { Loader2, Search, Eye } from "lucide-react";
+import { Loader2, Search, Eye, Trash2 } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 
 // Submission type definition
@@ -66,6 +66,8 @@ export default function AdminDashboard() {
   });
   const [search, setSearch] = useState("");
   const [selectedSubmission, setSelectedSubmission] = useState<Submission | null>(null);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   useEffect(() => {
     fetchSubmissions();
@@ -104,6 +106,32 @@ export default function AdminDashboard() {
     setSelectedSubmission(submission);
   };
 
+  const handleDelete = async (submission: Submission) => {
+    const confirmed = window.confirm(
+      `Delete submission from ${submission.firstName} ${submission.lastName}? This cannot be undone.`
+    );
+    if (!confirmed) return;
+
+    setDeletingId(submission._id);
+    try {
+      const response = await fetch(`/api/admin/submissions/${submission._id}`, {
+        method: "DELETE"
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete submission");
+      }
+
+      await fetchSubmissions();
+      setToastMessage("Submission deleted.");
+      setTimeout(() => setToastMessage(null), 2200);
+    } catch (error) {
+      console.error("Error deleting submission:", error);
+    } finally {
+      setDeletingId(null);
+    }
+  };
+
   if (loading && submissions.length === 0) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -114,6 +142,11 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {toastMessage && (
+        <div className="fixed top-4 right-4 z-50 rounded-md border border-green-200 bg-white px-4 py-3 text-sm text-green-700 shadow-sm">
+          {toastMessage}
+        </div>
+      )}
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <h1 className="text-2xl font-bold text-gray-900">Contact Form Submissions</h1>
@@ -183,6 +216,16 @@ export default function AdminDashboard() {
                           >
                             <Eye className="h-4 w-4 mr-1" />
                             View
+                          </Button>
+                          <Button
+                            variant="destructive"
+                            size="sm"
+                            className="ml-2"
+                            onClick={() => handleDelete(submission)}
+                            disabled={deletingId === submission._id}
+                          >
+                            <Trash2 className="h-4 w-4 mr-1" />
+                            {deletingId === submission._id ? "Deleting..." : "Delete"}
                           </Button>
                         </TableCell>
                       </TableRow>

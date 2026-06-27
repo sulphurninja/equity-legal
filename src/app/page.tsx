@@ -16,7 +16,7 @@ export default function Home() {
         <CaseTypesList />
         <ClaimProcess />
         <CaseEvaluation />
-        {/* <Testimonials /> */}
+        <Testimonials />
         <FrequentlyAskedQuestions />
       </div>
     </main>

@@ -14,6 +14,56 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
+      name: "Amanda R.",
+      location: "Ohio",
+      case: "NEC Baby Formula",
+      quote: "Our family needed answers after our premature baby developed NEC. The team listened with compassion, reviewed our records quickly, and helped us take the next step with confidence.",
+      rating: 5,
+      verified: true,
+      outcome: "Case Review Completed"
+    },
+    {
+      id: 2,
+      name: "Marcus T.",
+      location: "Michigan",
+      case: "NEC Baby Formula",
+      quote: "The process felt overwhelming at first, but they explained every detail and treated our child's story with real care. We finally felt like someone was standing with us.",
+      rating: 5,
+      verified: true,
+      outcome: "Family Supported"
+    },
+    {
+      id: 3,
+      name: "Daniel H.",
+      location: "Missouri",
+      case: "Roundup Weed Killer",
+      quote: "I used Roundup for years and did not know there could be a connection to my diagnosis. The legal team helped me understand my options and moved quickly on my claim review.",
+      rating: 5,
+      verified: true,
+      outcome: "Claimant Guidance"
+    },
+    {
+      id: 4,
+      name: "Kelly S.",
+      location: "Arizona",
+      case: "Rideshare Accident",
+      quote: "After my rideshare crash, insurance questions became confusing fast. They helped identify the right coverage path and made the entire review feel organized.",
+      rating: 5,
+      verified: true,
+      outcome: "Coverage Reviewed"
+    },
+    {
+      id: 5,
+      name: "Patricia G.",
+      location: "Nevada",
+      case: "Roblox Gaming Addiction",
+      quote: "We were worried about how gaming was affecting our child and did not know where to turn. The team was patient, respectful, and helped us understand whether we may qualify.",
+      rating: 5,
+      verified: true,
+      outcome: "Eligibility Reviewed"
+    },
+    {
+      id: 6,
       name: "Sarah M.",
       location: "California",
       case: "Camp Lejeune Water Contamination",
@@ -23,7 +73,7 @@ const Testimonials = () => {
       outcome: "Successful Settlement"
     },
     {
-      id: 2,
+      id: 7,
       name: "Robert K.",
       location: "Texas",
       case: "3M Combat Arms Earplugs",
@@ -33,7 +83,7 @@ const Testimonials = () => {
       outcome: "Maximum Compensation"
     },
     {
-      id: 3,
+      id: 8,
       name: "Maria L.",
       location: "Florida",
       case: "Roundup Weed Killer",
@@ -43,7 +93,7 @@ const Testimonials = () => {
       outcome: "Life-Changing Result"
     },
     {
-      id: 4,
+      id: 9,
       name: "James P.",
       location: "New York",
       case: "CPAP Machine Recall",
@@ -53,7 +103,7 @@ const Testimonials = () => {
       outcome: "Full Compensation"
     },
     {
-      id: 5,
+      id: 10,
       name: "Jennifer W.",
       location: "Illinois",
       case: "NEC Baby Formula",
@@ -63,7 +113,7 @@ const Testimonials = () => {
       outcome: "Substantial Award"
     },
     {
-      id: 6,
+      id: 11,
       name: "Michael D.",
       location: "Georgia",
       case: "Hernia Mesh Complications",
@@ -394,5 +444,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
-

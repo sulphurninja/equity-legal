@@ -263,8 +263,13 @@ const Hero = () => {
             className="flex items-center justify-center space-x-8 text-gray-300"
             variants={itemVariants}
           >
-
-
+            <motion.div
+              className="flex items-center space-x-2"
+              whileHover={{ scale: 1.05 }}
+            >
+               
+              <span className="text-sm font-medium">$2M recovered for claimants</span>
+            </motion.div>
 
             <motion.div
               className="hidden md:flex items-center space-x-2"
@@ -342,4 +347,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
